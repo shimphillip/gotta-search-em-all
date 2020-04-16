@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import './Pokedex.scss';
 import LeftPanel from './LeftPanel';
 import Divider from './Divider';
 import RightPanel from './RightPanel';
