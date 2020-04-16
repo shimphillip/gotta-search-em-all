@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 
 const Container = styled.div`
   height: 600px;
-  width: 600px;
+  width: 850px;
   background: ${({ theme }) => theme.colors.pokedexColor};
   ${({ theme }) => theme.darkBorders};
 

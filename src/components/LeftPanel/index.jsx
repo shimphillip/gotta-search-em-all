@@ -1,17 +1,18 @@
 import React from 'react';
 import Container from './styles';
 import Name from './Name';
+import Sprite from './Sprite';
 
 const LeftPanel = (pokemon) => {
   console.log(pokemon);
   const {
-    pokemonData: { name },
+    pokemonData: { name, sprites },
     pokemonIndex,
   } = pokemon;
   return (
     <Container>
       <Name name={name} pokemonIndex={pokemonIndex} />
-      <div className="sprite"></div>
+      <Sprite sprites={sprites} name={name} />
       <div className="description"></div>
     </Container>
   );
