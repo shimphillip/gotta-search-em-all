@@ -1,0 +1,18 @@
+.pokedex {
+  background: #ce372b;
+  width: 600px;
+  height: 600px;
+  border: 2px solid black;
+  border-radius: 15px;
+
+  .inner-container {
+    display: flex;
+    position: relative;
+    top: 1%;
+    left: 1%;
+    height: 98%;
+    width: 98%;
+    border: 2px solid black;
+    border-radius: 15px;
+  }
+}
