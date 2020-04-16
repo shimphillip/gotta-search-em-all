@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Container from './PokedexStyles';
 import LeftPanel from './LeftPanel';
 import Divider from './Divider';
 import RightPanel from './RightPanel';
@@ -98,13 +99,13 @@ const Pokedex = () => {
   }
 
   return (
-    <div className="pokedex">
+    <Container>
       <div className="inner-container">
         <LeftPanel {...pokemon} />
         <Divider />
         <RightPanel />
       </div>
-    </div>
+    </Container>
   );
 };
 

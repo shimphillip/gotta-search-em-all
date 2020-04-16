@@ -1,13 +1,13 @@
 import React from 'react';
+import Container from './styles';
 
 const Name = ({ name, pokemonIndex }) => {
   console.log(name);
   return (
-    <div class="nes-container is-rounded">
-      <p>
-        {name}, {pokemonIndex}
-      </p>
-    </div>
+    <Container>
+      <p>{name}</p>
+      <p>no. {pokemonIndex}</p>
+    </Container>
   );
 };
 

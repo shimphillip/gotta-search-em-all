@@ -1,4 +1,5 @@
 import React from 'react';
+import Container from './styles';
 import Name from './Name';
 
 const LeftPanel = (pokemon) => {
@@ -8,11 +9,11 @@ const LeftPanel = (pokemon) => {
     pokemonIndex,
   } = pokemon;
   return (
-    <div className="panel">
+    <Container>
       <Name name={name} pokemonIndex={pokemonIndex} />
       <div className="sprite"></div>
       <div className="description"></div>
-    </div>
+    </Container>
   );
 
   //   return (
