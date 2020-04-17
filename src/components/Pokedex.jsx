@@ -103,7 +103,7 @@ const Pokedex = () => {
       <div className="inner-container">
         <LeftPanel {...pokemon} />
         <Divider />
-        <RightPanel />
+        <RightPanel {...pokemon} />
       </div>
     </Container>
   );

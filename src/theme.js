@@ -1,3 +1,5 @@
+import styled from '@emotion/styled';
+
 const theme = {
   colors: {
     pokedexColor: '#ce372b',
@@ -10,6 +12,8 @@ const theme = {
       padding: 5px;
       border: inset #b31818 3px;
       border-radius: 3px;
+      display: flex;
+      flex-direction: column;
     `,
   screen: `
       background: linear-gradient(14deg, rgb(165, 205, 83) 60%, rgb(193, 217, 144) 65%);
@@ -47,5 +51,11 @@ const theme = {
       }
     `,
 };
+
+export const PanelRow = styled.div`
+  display: flex;
+  border-bottom: groove #757575 3px;
+  justify-content: space-evenly;
+`;
 
 export default theme;
