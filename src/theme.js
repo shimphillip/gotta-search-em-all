@@ -29,8 +29,8 @@ const theme = {
       background: linear-gradient(15deg, #cad5b5 64%, #dde2d4 70%, #dde2d4 81%, #fff 86%, #dde2d4 89%, #dde2d4 100%);
     `,
   spriteControl: `
-      height: 30px;
-      width: 30px;
+      height: 35px;
+      width: 35px;
       border: groove grey 3px;
       border-radius: 20px;
       cursor: pointer;
@@ -41,6 +41,11 @@ const theme = {
       color: black;
       padding: 1px;
       border-color: #b06868;
+      font-size: 15px;
+
+      &:hover {
+          border-color: #b8ed7c;
+      }
     `,
 };
 

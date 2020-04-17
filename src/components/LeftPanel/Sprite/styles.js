@@ -28,6 +28,10 @@ const Container = styled.div`
         border-color: #cdb589;
         width: 90px;
         text-shadow: white -1px 1px;
+
+        &:hover {
+          border-color: #b8ed7c;
+        }
       }
     }
   }
