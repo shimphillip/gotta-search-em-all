@@ -27,7 +27,7 @@ const App = () => (
 
           html {
             box-sizing: border-box;
-            font-size: 20px;
+            font-size: 15px;
           }
 
           body {

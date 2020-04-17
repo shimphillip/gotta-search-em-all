@@ -2,6 +2,7 @@ import React from 'react';
 import Container from './styles';
 import { PanelRow } from '../../theme';
 import Stats from './Stats';
+import Types from './Types';
 
 // pData={pData}
 // sData={sData}
@@ -21,6 +22,7 @@ const RightPanel = (pokemon) => {
     <Container>
       <PanelRow>
         <Stats stats={stats} />
+        <Types types={types} />
       </PanelRow>
     </Container>
   );
