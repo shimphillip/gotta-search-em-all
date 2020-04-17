@@ -1,4 +1,5 @@
 import { pokemonAPI } from './pokemonAPI';
-import { pickRandom } from './pickRandom'
+import { pickRandom } from './pickRandom';
+import { padTexts } from './padTexts';
 
-export { pokemonAPI, pickRandom };
+export { pokemonAPI, pickRandom, padTexts };
