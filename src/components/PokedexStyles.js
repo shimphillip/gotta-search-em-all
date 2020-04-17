@@ -1,10 +1,10 @@
 import styled from '@emotion/styled';
 
 const Container = styled.div`
-  height: 600px;
   width: 850px;
   background: ${({ theme }) => theme.colors.pokedexColor};
   ${({ theme }) => theme.darkBorders};
+  padding: 5px 0;
 
   .inner-container {
     position: relative;
@@ -13,6 +13,7 @@ const Container = styled.div`
     height: 98%;
     width: 98%;
     ${({ theme }) => theme.darkBorders};
+    border: 3px solid black;
     padding: 0.5rem;
 
     display: flex;

@@ -7,7 +7,7 @@ import { pokemonAPI, pickRandom } from '../helpers';
 
 const Pokedex = () => {
   const [pokemon, setPokemon] = useState({
-    pokemonIndex: 1,
+    pokemonIndex: 3,
     pokemonData: {},
     pokemonDescription: '',
     speciesData: {},

@@ -6,7 +6,7 @@ import Container from './styles';
 const Sprite = ({ sprites = {}, name = 'Pokemon Name' }) => {
   const [sprite, setSprite] = useState({
     front: true,
-    male: true,
+    female: false,
     shiny: false,
   });
   const [src, setSrc] = useState('');
@@ -22,21 +22,23 @@ const Sprite = ({ sprites = {}, name = 'Pokemon Name' }) => {
 
   function buildImage(sprite) {
     const dir = sprite.front ? 'front' : 'back';
-    const gender = sprite.female ? '_female' : '';
     const shiny = sprite.shiny ? '_shiny' : '_default';
+    const gender = sprite.female ? '_female' : '';
+
+    if (shiny === '_default' && gender === '_female') {
+      return dir + gender;
+    }
     return dir + shiny + gender;
   }
 
   const handleChange = (prop) =>
     setSprite({ ...sprite, [prop]: !sprite[prop] });
 
-  console.table(sprites);
-
   return (
     <Container>
       <img src={src} alt={name} />
       <div className="controls">
-        <div className="sprite-control" onClick={() => handleChange('male')}>
+        <div className="sprite-control" onClick={() => handleChange('female')}>
           <FontAwesomeIcon icon={faVenus} />
         </div>
         <div
