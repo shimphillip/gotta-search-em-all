@@ -13,10 +13,6 @@ const Sprite = ({ sprites = {}, name = 'Pokemon Name' }) => {
 
   useEffect(() => {
     const source = buildImage(sprite);
-    if (!sprites[source]) {
-      return;
-    }
-
     setSrc(sprites[source]);
   }, [sprite, sprites]);
 
@@ -31,8 +27,16 @@ const Sprite = ({ sprites = {}, name = 'Pokemon Name' }) => {
     return dir + shiny + gender;
   }
 
-  const handleChange = (prop) =>
+  const handleChange = (prop) => {
+    // make a copy and update its state
+    const spriteCopy = { ...sprite, [prop]: !sprite[prop] };
+    const source = buildImage(spriteCopy);
+    if (!sprites[source]) {
+      return;
+    }
+
     setSprite({ ...sprite, [prop]: !sprite[prop] });
+  };
 
   return (
     <Container>

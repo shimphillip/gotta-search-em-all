@@ -25,7 +25,6 @@ const theme = {
       border: inset #9aa28b 3px;
       border-radius: 5px;
       margin: 10px 0;
-      box-sizing: border-box;
       background: linear-gradient(15deg, #cad5b5 64%, #dde2d4 70%, #dde2d4 81%, #fff 86%, #dde2d4 89%, #dde2d4 100%);
     `,
   spriteControl: `

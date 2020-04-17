@@ -9,23 +9,15 @@ const LeftPanel = (pokemon) => {
   const {
     pokemonData: { name, sprites },
     pokemonIndex,
-    pokemonDescription
+    pokemonDescription,
   } = pokemon;
   return (
     <Container>
       <Name name={name} pokemonIndex={pokemonIndex} />
       <Sprite sprites={sprites} name={name} />
-      <Description description={pokemonDescription}/>
+      <Description description={pokemonDescription} />
     </Container>
   );
-
-  //   return (
-  //     <div className="panel left-panel">
-  //       <PokemonName name={pData.name} no={props.no} />
-  //       <PokemonSprite src={pData.sprites} />
-  //       <PokemonDescription description={props.description} no={props.no} />
-  //     </div>
-  //   );
 };
 
 export default LeftPanel;
