@@ -1,8 +1,8 @@
 import React from 'react';
-import Container from './styles';
+import { TypeBadge } from '../../../../shared';
 
 const TypeItem = ({ name }) => {
-  return <Container name={name}>{name}</Container>;
+  return <TypeBadge name={name}>{name}</TypeBadge>;
 };
 
 export default TypeItem;

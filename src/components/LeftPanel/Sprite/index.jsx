@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faVenus, faUndo } from '@fortawesome/free-solid-svg-icons';
 import Container from './styles';
+import { Button } from '../../shared';
 
 const Sprite = ({ sprites = {}, name = 'Pokemon Name' }) => {
   const [sprite, setSprite] = useState({
@@ -42,18 +43,24 @@ const Sprite = ({ sprites = {}, name = 'Pokemon Name' }) => {
     <Container>
       <img src={src} alt={name} />
       <div className="controls">
-        <div className="sprite-control" onClick={() => handleChange('female')}>
+        <Button onClick={() => handleChange('female')}>
           <FontAwesomeIcon icon={faVenus} />
-        </div>
-        <div
+        </Button>
+        <Button
+          className="shiny"
+          onClick={() => handleChange('shiny')}
+        >
+          Shiny
+        </Button>
+        {/* <div
           className="sprite-control sprite-control-shiny"
           onClick={() => handleChange('shiny')}
         >
           Shiny
-        </div>
-        <div className="sprite-control" onClick={() => handleChange('front')}>
+        </div> */}
+        <Button onClick={() => handleChange('front')}>
           <FontAwesomeIcon icon={faUndo} />
-        </div>
+        </Button>
       </div>
     </Container>
   );

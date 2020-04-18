@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Container from './styles';
 import MovesScreen from './MovesScreen';
+import { pickRandom } from '../../../helpers';
 
 const Moves = ({ moves = [] }) => {
   const [moveIndex, setMoveIndex] = useState(0);
@@ -41,6 +42,11 @@ const Moves = ({ moves = [] }) => {
       );
     }
 
+    const flavorTexts = data.flavor_text_entries
+      .filter((entry) => entry.language.name === 'en')
+      .map((entry) => entry.flavor_text);
+    const moveDescription = pickRandom(flavorTexts);
+
     setMoveInfo({
       name,
       learndAt,
@@ -52,16 +58,15 @@ const Moves = ({ moves = [] }) => {
       effectChance,
       effectDescription,
       learnMethod,
+      moveDescription,
     });
   }
 
   return (
     <Container>
+      <button>1</button>
       <MovesScreen moveInfo={moveInfo} />
-      <div className="button-container">
-        <button>1</button>
-        <button>2</button>
-      </div>
+      <button>2</button>
     </Container>
   );
 };
