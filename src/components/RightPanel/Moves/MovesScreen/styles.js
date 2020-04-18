@@ -7,6 +7,7 @@ const Container = styled.div`
   margin: 3px;
   padding: 5 10px;
   flex: 1;
+  height: 200px;
 
   .flex {
     display: flex;
@@ -27,8 +28,10 @@ const Container = styled.div`
   .move-description {
     ${({ theme }) => theme.spriteScreen}
     display: block;
+    height: 100%;
     margin: 10px 3px 5px;
     padding: 5px 10px;
+    overflow-y: scroll;
 
     hr {
       margin: 5px 0;

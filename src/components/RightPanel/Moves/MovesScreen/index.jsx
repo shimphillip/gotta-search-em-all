@@ -7,19 +7,18 @@ const MovesScreen = ({ moveInfo }) => {
   console.log(moveInfo);
   const {
     name,
-    learndAt,
+    learnedAt,
     accuracy,
     damageClass,
     power,
     pp,
     type,
-    effectChance,
     effectDescription,
     learnMethod,
     moveDescription,
   } = moveInfo;
 
-  console.log('learned at', learndAt);
+  console.log('learned at', learnedAt);
 
   return (
     <Container>
@@ -41,15 +40,14 @@ const MovesScreen = ({ moveInfo }) => {
             {type}
           </TypeBadge>
           <p>{padTexts('Class:', damageClass, '.', 20)}</p>
-          <p>{padTexts('Learned At:', learndAt, '.', 20)}</p>
+          <p>{padTexts('Learned At:', learnedAt, '.', 20)}</p>
           <p>{padTexts('Method:', learnMethod, '.', 20)}</p>
         </div>
       </div>
       <div className="move-description">
         <p>Description: {moveDescription}</p>
         <hr/> 
-        <p>Effect chance: {effectChance}</p>
-        <p>Description: {effectDescription}</p>
+        <p>Effect: {effectDescription}</p>
       </div>
     </Container>
   );

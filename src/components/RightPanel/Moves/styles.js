@@ -1,11 +1,8 @@
 import styled from '@emotion/styled';
 
 const Container = styled.div`
-    display: flex;
+  display: flex;
+  align-items: center;
 `;
-
-const MoveButton = styled.button`
-    
-`
 
 export default Container;

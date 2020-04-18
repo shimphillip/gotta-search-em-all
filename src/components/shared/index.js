@@ -41,6 +41,7 @@ export const Button = styled.button`
   padding: 1px;
   border-color: #b06868;
   font-size: 15px;
+  outline: none;
 
   &:hover {
     border-color: #b8ed7c;

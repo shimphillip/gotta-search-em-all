@@ -46,18 +46,9 @@ const Sprite = ({ sprites = {}, name = 'Pokemon Name' }) => {
         <Button onClick={() => handleChange('female')}>
           <FontAwesomeIcon icon={faVenus} />
         </Button>
-        <Button
-          className="shiny"
-          onClick={() => handleChange('shiny')}
-        >
+        <Button className="shiny" onClick={() => handleChange('shiny')}>
           Shiny
         </Button>
-        {/* <div
-          className="sprite-control sprite-control-shiny"
-          onClick={() => handleChange('shiny')}
-        >
-          Shiny
-        </div> */}
         <Button onClick={() => handleChange('front')}>
           <FontAwesomeIcon icon={faUndo} />
         </Button>
