@@ -3,8 +3,6 @@ import Container from './styles';
 import TypeItem from './TypeItem';
 
 const TypeBox = ({ types = [] }) => {
-  console.log('types', types);
-
   return (
     <Container>
       {types.map(({ type: { name } }) => {

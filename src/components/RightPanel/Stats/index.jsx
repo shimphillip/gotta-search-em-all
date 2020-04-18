@@ -3,7 +3,6 @@ import Container from './styles';
 import StatLine from './StatLine';
 
 const Stats = ({ stats = [] }) => {
-  console.log('stats', stats);
   return (
     <Container>
       {stats.map((stat) => {

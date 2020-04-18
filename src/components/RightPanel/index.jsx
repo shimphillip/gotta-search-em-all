@@ -3,7 +3,8 @@ import Container from './styles';
 import { PanelRow } from '../../theme';
 import Stats from './Stats';
 import Types from './Types';
-import EvolutionSprite from './EvolutionSprite'
+import EvolutionSprite from './EvolutionSprite';
+import Moves from './Moves';
 
 // pData={pData}
 // sData={sData}
@@ -39,6 +40,9 @@ const RightPanel = (pokemon) => {
         <EvolutionSprite image={sprite1} stage="I" name={name1} />
         <EvolutionSprite image={sprite2} stage="II" name={name2} />
         <EvolutionSprite image={sprite3} stage="III" name={name3} />
+      </PanelRow>
+      <PanelRow>
+        <Moves moves={moves} />
       </PanelRow>
     </Container>
   );
