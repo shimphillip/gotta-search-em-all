@@ -6,7 +6,7 @@ const Types = ({ types }) => {
   return (
     <Container>
       <div className="type-header">Types</div>
-      <TypeBox types={types}/>
+      <TypeBox types={types} />
     </Container>
   );
 };

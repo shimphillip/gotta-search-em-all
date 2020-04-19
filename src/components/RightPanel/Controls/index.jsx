@@ -10,12 +10,15 @@ const Controls = ({ pokemonIndex, changePokemonIndex }) => {
       <Button onClick={() => changePokemonIndex(pokemonIndex - 1)}>
         <FontAwesomeIcon icon={faArrowDown} />
       </Button>
-      <input
-        type="text"
-        className="input"
-        value={pokemonIndex}
-        onChange={(e) => changePokemonIndex(e.target.value)}
-      />
+      <span>
+        No:{' '}
+        <input
+          type="text"
+          className="input"
+          value={pokemonIndex}
+          onChange={(e) => changePokemonIndex(e.target.value)}
+        />
+      </span>
       <Button onClick={() => changePokemonIndex(pokemonIndex + 1)}>
         <FontAwesomeIcon icon={faArrowUp} />
       </Button>
