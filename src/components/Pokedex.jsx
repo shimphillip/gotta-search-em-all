@@ -5,9 +5,10 @@ import Divider from './Divider';
 import RightPanel from './RightPanel';
 import { pokemonAPI, pickRandom } from '../helpers';
 
+const NUMBER_OF_POKEMONS = 807;
+
 const Pokedex = () => {
   const [pokemon, setPokemon] = useState({
-    pokemonIndex: 6,
     pokemonData: {},
     pokemonDescription: '',
     speciesData: {},
@@ -15,20 +16,21 @@ const Pokedex = () => {
     evolutionNames: [],
     moves: [],
   });
+  const [pokemonIndex, setPokemonIndex] = useState(1);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    changePokemon(pokemon.pokemonIndex);
-  }, []);
+    changePokemon(pokemonIndex);
+  }, [pokemonIndex]);
 
-  async function changePokemon(defaultPokemonIndex) {
+  async function changePokemon(pokemonIndex) {
     try {
       // setLoading(true);
       const pokemonData = await fetch(
-        `${pokemonAPI}pokemon/${defaultPokemonIndex}`
+        `${pokemonAPI}pokemon/${pokemonIndex}`
       ).then((response) => response.json());
 
-      const pokemonIndex = pokemonData.id;
+      // const pokemonIndex = pokemonData.id;
       const speciesRequest = pokemonData.species.url;
       const moves = pokemonData.moves;
 
@@ -98,12 +100,24 @@ const Pokedex = () => {
     }
   }
 
+  const changePokemonIndex = (index) => {
+    if (index < 0 || index > NUMBER_OF_POKEMONS) {
+      return;
+    }
+
+    setPokemonIndex(index);
+  };
+
   return (
     <Container>
       <div className="inner-container">
         <LeftPanel {...pokemon} />
         <Divider />
-        <RightPanel {...pokemon} />
+        <RightPanel
+          pokemon={pokemon}
+          pokemonIndex={pokemonIndex}
+          changePokemonIndex={changePokemonIndex}
+        />
       </div>
     </Container>
   );

@@ -5,15 +5,9 @@ import Stats from './Stats';
 import Types from './Types';
 import EvolutionSprite from './EvolutionSprite';
 import Moves from './Moves';
+import Controls from './Controls';
 
-// pData={pData}
-// sData={sData}
-// evoSprites={this.state.evoSprites}
-// evoNames={this.state.evoNames}
-// controls={{ next: this.nextPokemon, prev: this.previousPokemon, pick: this.pickPokemon }}
-// no={this.state.pokemonIndex}
-
-const RightPanel = (pokemon) => {
+const RightPanel = ({ pokemon, pokemonIndex, changePokemonIndex }) => {
   console.log(pokemon);
 
   const {
@@ -43,6 +37,12 @@ const RightPanel = (pokemon) => {
       </PanelRow>
       <PanelRow>
         <Moves moves={moves} />
+      </PanelRow>
+      <PanelRow>
+        <Controls
+          pokemonIndex={pokemonIndex}
+          changePokemonIndex={changePokemonIndex}
+        />
       </PanelRow>
     </Container>
   );
