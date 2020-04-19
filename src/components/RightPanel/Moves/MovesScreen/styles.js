@@ -7,7 +7,7 @@ const Container = styled.div`
   margin: 3px;
   padding: 5 10px;
   flex: 1;
-  height: 200px;
+  height: 205px;
 
   .flex {
     display: flex;

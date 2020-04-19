@@ -15,15 +15,14 @@ const Moves = ({ moves = [] }) => {
   }, [moveIndex, moves]);
 
   async function fetchMove(moves) {
-    console.log('inside', moves);
-
     if (!moves.length) {
       return;
     }
 
     const { name } = moves[moveIndex].move;
     const { url } = moves[moveIndex].move;
-    const learnedAt = moves[moveIndex].version_group_details[0].level_learned_at;
+    const learnedAt =
+      moves[moveIndex].version_group_details[0].level_learned_at;
     const learnMethod =
       moves[moveIndex].version_group_details[0].move_learn_method.name;
 
@@ -62,13 +61,27 @@ const Moves = ({ moves = [] }) => {
     });
   }
 
+  const handleNegativeIndex = () => {
+    if (!moves[moveIndex - 1]) {
+      return setMoveIndex(moves.length - 1);
+    }
+    setMoveIndex(moveIndex - 1);
+  };
+
+  const handlePositiveIndex = () => {
+    if (!moves[moveIndex + 1]) {
+      return setMoveIndex(0);
+    }
+    setMoveIndex(moveIndex + 1);
+  };
+
   return (
     <Container>
-      <Button onClick={() => setMoveIndex(moveIndex - 1)}>
+      <Button onClick={handleNegativeIndex}>
         <FontAwesomeIcon icon={faArrowLeft} />
       </Button>
       <MovesScreen moveInfo={moveInfo} />
-      <Button onClick={() => setMoveIndex(moveIndex + 1)}>
+      <Button onClick={handlePositiveIndex}>
         <FontAwesomeIcon icon={faArrowRight} />
       </Button>
     </Container>

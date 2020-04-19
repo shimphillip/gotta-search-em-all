@@ -4,7 +4,6 @@ import { padTexts } from '../../../../helpers';
 import { TypeBadge } from '../../../shared';
 
 const MovesScreen = ({ moveInfo }) => {
-  console.log(moveInfo);
   const {
     name,
     learnedAt,
@@ -17,8 +16,6 @@ const MovesScreen = ({ moveInfo }) => {
     learnMethod,
     moveDescription,
   } = moveInfo;
-
-  console.log('learned at', learnedAt);
 
   return (
     <Container>
@@ -45,9 +42,13 @@ const MovesScreen = ({ moveInfo }) => {
         </div>
       </div>
       <div className="move-description">
-        <p>Description: {moveDescription}</p>
-        <hr/> 
-        <p>Effect: {effectDescription}</p>
+        <p>
+          <strong>Description:</strong> {moveDescription}
+        </p>
+        <hr />
+        <p>
+          <strong>Effect:</strong> {effectDescription}
+        </p>
       </div>
     </Container>
   );
