@@ -29,7 +29,7 @@ const Container = styled.div`
     flex: 1;
     width: 95%;
 
-    &:first-child {
+    &:first-of-type {
       border-radius: 0 0 5px 5px;
       border-top: none;
     }

@@ -111,7 +111,7 @@ const Pokedex = () => {
   return (
     <Container>
       <div className="inner-container">
-        <LeftPanel {...pokemon} />
+        <LeftPanel pokemon={pokemon} />
         <Divider />
         <RightPanel
           pokemon={pokemon}

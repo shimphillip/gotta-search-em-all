@@ -8,8 +8,6 @@ import Moves from './Moves';
 import Controls from './Controls';
 
 const RightPanel = ({ pokemon, pokemonIndex, changePokemonIndex }) => {
-  console.log(pokemon);
-
   const {
     pokemonData: { types, stats, moves },
     evolutionSprites,

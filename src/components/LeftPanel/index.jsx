@@ -4,13 +4,14 @@ import Name from './Name';
 import Sprite from './Sprite';
 import Description from './Description';
 
-const LeftPanel = (pokemon) => {
+const LeftPanel = ({ pokemon }) => {
   // console.log(pokemon);
   const {
     pokemonData: { name, sprites },
     pokemonIndex,
     pokemonDescription,
   } = pokemon;
+  
   return (
     <Container>
       <Name name={name} pokemonIndex={pokemonIndex} />
