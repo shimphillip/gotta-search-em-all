@@ -16,7 +16,7 @@ const Pokedex = () => {
     evolutionNames: [],
     moves: [],
   });
-  const [pokemonIndex, setPokemonIndex] = useState(1);
+  const [pokemonIndex, setPokemonIndex] = useState(19);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
