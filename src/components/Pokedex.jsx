@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import Loader from 'react-loader-spinner';
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
 import Container from './PokedexStyles';
 import LeftPanel from './LeftPanel';
@@ -113,30 +112,17 @@ const Pokedex = () => {
   };
 
   return (
-    <>
-      {loading && (
-        <Loader
-          type="Bars"
-          color="#DF1C18"
-          height={150}
-          width={150}
+    <Container>
+      <div className="inner-container">
+        <LeftPanel pokemon={pokemon} loading={loading} />
+        <Divider />
+        <RightPanel
+          pokemon={pokemon}
+          pokemonIndex={pokemonIndex}
+          changePokemonIndex={changePokemonIndex}
         />
-      )}
-
-      {!loading && (
-        <Container>
-          <div className="inner-container">
-            <LeftPanel pokemon={pokemon} />
-            <Divider />
-            <RightPanel
-              pokemon={pokemon}
-              pokemonIndex={pokemonIndex}
-              changePokemonIndex={changePokemonIndex}
-            />
-          </div>
-        </Container>
-      )}
-    </>
+      </div>
+    </Container>
   );
 };
 

@@ -42,6 +42,7 @@ export const Button = styled.button`
   border-color: #b06868;
   font-size: 15px;
   outline: none;
+  background-color: inherit;
 
   &:hover {
     border-color: #b8ed7c;

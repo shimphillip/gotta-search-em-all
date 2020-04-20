@@ -4,8 +4,9 @@ import { faVenus, faUndo } from '@fortawesome/free-solid-svg-icons';
 import Container from './styles';
 import { Button } from '../../shared';
 import PokeBall from '../../shared/PokeBall';
+import Loading from '../../shared/Loading';
 
-const Sprite = ({ sprites = {}, name = 'Pokemon Name' }) => {
+const Sprite = ({ sprites = {}, name, loading }) => {
   const [sprite, setSprite] = useState({
     front: true,
     female: false,
@@ -45,10 +46,20 @@ const Sprite = ({ sprites = {}, name = 'Pokemon Name' }) => {
     setSprite({ ...sprite, [prop]: !sprite[prop] });
   };
 
+  const renderScreen = () => {
+    if (loading) {
+      return <Loading />;
+    }
+    if (src) {
+      return <img src={src} alt={name} />;
+    }
+
+    return <PokeBall nameClass="bigScreen" />;
+  };
+
   return (
     <Container error={error}>
-      {src && <img src={src} alt={name} />}
-      {!src && <PokeBall nameClass="bigScreen" />}
+      {renderScreen()}
       <div className="controls">
         <Button onClick={() => handleChange('female')}>
           <FontAwesomeIcon icon={faVenus} />

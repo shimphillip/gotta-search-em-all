@@ -66,7 +66,7 @@ const Moves = ({ moves = [] }) => {
 
   function getRandomMoveOnLoad() {
     // the least amount of moves a pokemon can have is 5
-    return Math.floor(Math.random() * 5);
+    return Math.floor(Math.random() * 2);
   }
 
   const handleNegativeIndex = () => {
