@@ -19,6 +19,10 @@ const AppContainer = styled.div`
     margin-bottom: 10px;
     font-family: 'Staatliches';
     letter-spacing: 5px;
+
+    .red {
+      color: #df1c18;
+    }
   }
 `;
 
@@ -48,7 +52,9 @@ const App = () => (
           }
         `}
       />
-      <h1>Gotta search'em all</h1>
+      <h1>
+        Gotta <span className="red">search'em</span> all
+      </h1>
       <Pokedex />
     </AppContainer>
   </ThemeProvider>
