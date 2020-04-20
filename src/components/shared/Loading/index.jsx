@@ -1,7 +1,7 @@
 import React from 'react';
 import Container from './styles';
 
-const index = () => {
+const Loading = () => {
   return (
     <Container>
       <div class="pokeball">
@@ -17,4 +17,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Loading;

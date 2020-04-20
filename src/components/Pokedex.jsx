@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
 import Container from './PokedexStyles';
 import LeftPanel from './LeftPanel';
 import Divider from './Divider';

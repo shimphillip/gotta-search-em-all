@@ -73,8 +73,8 @@ const Container = styled.div`
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    -webkit-animation: glow 1.6s ease-in-out infinite;
-    animation: glow 1.6s ease-in-out infinite;
+    -webkit-animation: glow 0.8s ease-in-out infinite;
+    animation: glow 0.8s ease-in-out infinite;
   }
 
   .shadow {

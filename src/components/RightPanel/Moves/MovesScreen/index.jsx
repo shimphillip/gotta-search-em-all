@@ -2,7 +2,7 @@ import React from 'react';
 import Container from './styles';
 import { padTexts } from '../../../../helpers';
 import { TypeBadge } from '../../../shared';
-import Loader from 'react-loader-spinner';
+import { Loading } from '../../../shared';
 
 const MovesScreen = ({ moveInfo, loading }) => {
   const {
@@ -20,15 +20,7 @@ const MovesScreen = ({ moveInfo, loading }) => {
 
   return (
     <Container>
-      {loading && (
-        <Loader
-          type="TailSpin"
-          color="#DF1C18"
-          height={50}
-          width={50}
-          className="loader"
-        />
-      )}
+      {loading && <Loading />}
       {!loading && (
         <>
           <div className="flex">

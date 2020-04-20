@@ -4,13 +4,22 @@ import { Global, css } from '@emotion/core';
 import { ThemeProvider } from 'emotion-theming';
 import Pokedex from './components/Pokedex';
 import theme from './components/shared/theme';
-import pikachu from './assets/pikachu.png'
+import pikachu from './assets/pikachu.png';
 
 const AppContainer = styled.div`
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+
+  h1 {
+    font-size: 4rem;
+    text-align: center;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    font-family: 'Staatliches';
+    letter-spacing: 5px;
+  }
 `;
 
 const App = () => (
@@ -39,6 +48,7 @@ const App = () => (
           }
         `}
       />
+      <h1>Gotta search'em all</h1>
       <Pokedex />
     </AppContainer>
   </ThemeProvider>
