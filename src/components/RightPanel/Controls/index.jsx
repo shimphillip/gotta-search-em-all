@@ -5,8 +5,6 @@ import { faArrowUp, faArrowDown } from '@fortawesome/free-solid-svg-icons';
 import { Button } from '../../shared';
 
 const Controls = ({ pokemonIndex, changePokemonIndex }) => {
-  console.log('current Pokeon Index', pokemonIndex);
-
   return (
     <Container>
       <Button onClick={() => changePokemonIndex(Number(pokemonIndex) - 1)}>

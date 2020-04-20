@@ -12,6 +12,7 @@ const Sprite = ({ sprites = {}, name = 'Pokemon Name' }) => {
     shiny: false,
   });
   const [src, setSrc] = useState('');
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     const source = buildImage(sprite);
@@ -34,14 +35,18 @@ const Sprite = ({ sprites = {}, name = 'Pokemon Name' }) => {
     const spriteCopy = { ...sprite, [prop]: !sprite[prop] };
     const source = buildImage(spriteCopy);
     if (!sprites[source]) {
-      return;
+      setError(true);
+
+      return setTimeout(() => {
+        setError(false);
+      }, 500);
     }
 
     setSprite({ ...sprite, [prop]: !sprite[prop] });
   };
 
   return (
-    <Container>
+    <Container error={error}>
       {src && <img src={src} alt={name} />}
       {!src && <PokeBall nameClass="bigScreen" />}
       <div className="controls">

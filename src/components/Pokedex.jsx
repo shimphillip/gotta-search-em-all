@@ -99,8 +99,6 @@ const Pokedex = () => {
   }
 
   const changePokemonIndex = (newIndex) => {
-    console.log('newIndex is ', newIndex);
-
     if (newIndex < 0 || newIndex > NUMBER_OF_POKEMONS) {
       return;
     }
