@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faVenus, faUndo } from '@fortawesome/free-solid-svg-icons';
 import Container from './styles';
 import { Button } from '../../shared';
+import PokeBall from '../../shared/PokeBall';
 
 const Sprite = ({ sprites = {}, name = 'Pokemon Name' }) => {
   const [sprite, setSprite] = useState({
@@ -41,7 +42,8 @@ const Sprite = ({ sprites = {}, name = 'Pokemon Name' }) => {
 
   return (
     <Container>
-      <img src={src} alt={name} />
+      {src && <img src={src} alt={name} />}
+      {!src && <PokeBall nameClass="bigScreen" />}
       <div className="controls">
         <Button onClick={() => handleChange('female')}>
           <FontAwesomeIcon icon={faVenus} />

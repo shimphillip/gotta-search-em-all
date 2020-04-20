@@ -9,6 +9,7 @@ import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 const Moves = ({ moves = [] }) => {
   const [moveIndex, setMoveIndex] = useState(0);
   const [moveInfo, setMoveInfo] = useState({});
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     fetchMove(moves);
@@ -18,6 +19,7 @@ const Moves = ({ moves = [] }) => {
     if (!moves.length) {
       return;
     }
+    setLoading(true);
 
     const { name } = moves[moveIndex].move;
     const { url } = moves[moveIndex].move;
@@ -47,6 +49,7 @@ const Moves = ({ moves = [] }) => {
       .map((entry) => entry.flavor_text);
     const moveDescription = pickRandom(flavorTexts);
 
+    setLoading(false);
     setMoveInfo({
       name,
       learnedAt,
@@ -80,7 +83,7 @@ const Moves = ({ moves = [] }) => {
       <Button onClick={handleNegativeIndex}>
         <FontAwesomeIcon icon={faArrowLeft} />
       </Button>
-      <MovesScreen moveInfo={moveInfo} />
+      <MovesScreen moveInfo={moveInfo} loading={loading} />
       <Button onClick={handlePositiveIndex}>
         <FontAwesomeIcon icon={faArrowRight} />
       </Button>

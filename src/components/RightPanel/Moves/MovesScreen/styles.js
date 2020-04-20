@@ -4,10 +4,18 @@ const Container = styled.div`
   ${({ theme }) => theme.screen}
   display: flex;
   flex-direction: column;
+  /* justify-content: center;
+  align-items: center; */
   margin: 3px;
   padding: 5 10px;
   flex: 1;
   height: 205px;
+
+  .loader {
+    position: relative;
+    top: 35%;
+    left: 40%;
+  }
 
   .flex {
     display: flex;

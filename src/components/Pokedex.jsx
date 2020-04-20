@@ -16,10 +16,13 @@ const Pokedex = () => {
     evolutionNames: [],
     moves: [],
   });
-  const [pokemonIndex, setPokemonIndex] = useState(19);
+  const [pokemonIndex, setPokemonIndex] = useState(
+    localStorage.getItem('pokemonIndex') || 25
+  );
 
   useEffect(() => {
     changePokemon(pokemonIndex);
+    localStorage.setItem('pokemonIndex', pokemonIndex);
   }, [pokemonIndex]);
 
   async function changePokemon(pokemonIndex) {
