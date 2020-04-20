@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import { Global, css } from '@emotion/core';
 import { ThemeProvider } from 'emotion-theming';
 import Pokedex from './components/Pokedex';
-import theme from './theme';
+import theme from './components/shared/theme';
 import pikachu from './assets/pikachu.png'
 
 const AppContainer = styled.div`

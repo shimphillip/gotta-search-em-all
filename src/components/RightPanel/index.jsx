@@ -1,8 +1,6 @@
 import React from 'react';
 import Container from './styles';
-import { PanelRow } from '../../theme';
 import StatsAndTypes from './StatsAndTypes';
-
 import Evolutions from './Evolutions';
 import Moves from './Moves';
 import Controls from './Controls';

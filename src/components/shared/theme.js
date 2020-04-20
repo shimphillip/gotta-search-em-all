@@ -1,5 +1,3 @@
-import styled from '@emotion/styled';
-
 const theme = {
   colors: {
     pokedexColor: '#ce372b',
@@ -51,11 +49,5 @@ const theme = {
       }
     `,
 };
-
-export const PanelRow = styled.div`
-  display: flex;
-  border-bottom: groove #757575 3px;
-  justify-content: space-evenly;
-`;
 
 export default theme;
