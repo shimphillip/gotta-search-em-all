@@ -4,6 +4,7 @@ import { Global, css } from '@emotion/core';
 import { ThemeProvider } from 'emotion-theming';
 import Pokedex from './components/Pokedex';
 import theme from './theme';
+import pikachu from './assets/pikachu.png'
 
 const AppContainer = styled.div`
   position: absolute;
@@ -33,6 +34,8 @@ const App = () => (
           body {
             font-family: 'VT323', monospace;
             height: 100vh;
+            background-image: url(${pikachu});
+            background-position: bottom left;
           }
         `}
       />

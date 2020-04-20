@@ -17,7 +17,6 @@ const Pokedex = () => {
     moves: [],
   });
   const [pokemonIndex, setPokemonIndex] = useState(19);
-  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     changePokemon(pokemonIndex);
@@ -25,12 +24,10 @@ const Pokedex = () => {
 
   async function changePokemon(pokemonIndex) {
     try {
-      // setLoading(true);
       const pokemonData = await fetch(
         `${pokemonAPI}pokemon/${pokemonIndex}`
       ).then((response) => response.json());
 
-      // const pokemonIndex = pokemonData.id;
       const speciesRequest = pokemonData.species.url;
       const moves = pokemonData.moves;
 
@@ -43,8 +40,6 @@ const Pokedex = () => {
         .map((entry) => entry.flavor_text);
 
       const description = pickRandom(flavorTexts);
-      // setLoading(false);
-
       const evolutionRequest = speciesData.evolution_chain.url;
 
       const evolutionData = await fetch(evolutionRequest).then((response) =>
