@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import Loader from 'react-loader-spinner';
+import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
 import Container from './PokedexStyles';
 import LeftPanel from './LeftPanel';
 import Divider from './Divider';
@@ -19,6 +21,7 @@ const Pokedex = () => {
   const [pokemonIndex, setPokemonIndex] = useState(
     localStorage.getItem('pokemonIndex') || 25
   );
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     changePokemon(pokemonIndex);
@@ -27,6 +30,7 @@ const Pokedex = () => {
 
   async function changePokemon(pokemonIndex) {
     try {
+      setLoading(true);
       const pokemonData = await fetch(
         `${pokemonAPI}pokemon/${pokemonIndex}`
       ).then((response) => response.json());
@@ -80,6 +84,8 @@ const Pokedex = () => {
             const names = pokemons.map((pokemon) => {
               return pokemon.name;
             });
+
+            setLoading(false);
             setPokemon({
               ...pokemon,
               pokemonData,
@@ -107,17 +113,30 @@ const Pokedex = () => {
   };
 
   return (
-    <Container>
-      <div className="inner-container">
-        <LeftPanel pokemon={pokemon} />
-        <Divider />
-        <RightPanel
-          pokemon={pokemon}
-          pokemonIndex={pokemonIndex}
-          changePokemonIndex={changePokemonIndex}
+    <>
+      {loading && (
+        <Loader
+          type="Bars"
+          color="#DF1C18"
+          height={150}
+          width={150}
         />
-      </div>
-    </Container>
+      )}
+
+      {!loading && (
+        <Container>
+          <div className="inner-container">
+            <LeftPanel pokemon={pokemon} />
+            <Divider />
+            <RightPanel
+              pokemon={pokemon}
+              pokemonIndex={pokemonIndex}
+              changePokemonIndex={changePokemonIndex}
+            />
+          </div>
+        </Container>
+      )}
+    </>
   );
 };
 

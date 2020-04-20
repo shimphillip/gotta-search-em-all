@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Container from './styles';
 import { padTexts } from '../../../../helpers';
 import { TypeBadge } from '../../../shared';
 import Loader from 'react-loader-spinner';
-import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
 
 const MovesScreen = ({ moveInfo, loading }) => {
   const {
@@ -24,10 +23,9 @@ const MovesScreen = ({ moveInfo, loading }) => {
       {loading && (
         <Loader
           type="TailSpin"
-          color="#9aa28b"
+          color="#DF1C18"
           height={50}
           width={50}
-          timeout={3000} //3 secs
           className="loader"
         />
       )}

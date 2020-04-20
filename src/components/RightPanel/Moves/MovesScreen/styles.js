@@ -4,9 +4,8 @@ const Container = styled.div`
   ${({ theme }) => theme.screen}
   display: flex;
   flex-direction: column;
-  /* justify-content: center;
-  align-items: center; */
-  margin: 3px;
+
+  margin: 5px;
   padding: 5 10px;
   flex: 1;
   height: 205px;
