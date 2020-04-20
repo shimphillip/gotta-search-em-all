@@ -5,9 +5,11 @@ import { faArrowUp, faArrowDown } from '@fortawesome/free-solid-svg-icons';
 import { Button } from '../../shared';
 
 const Controls = ({ pokemonIndex, changePokemonIndex }) => {
+  console.log('current Pokeon Index', pokemonIndex);
+
   return (
     <Container>
-      <Button onClick={() => changePokemonIndex(pokemonIndex - 1)}>
+      <Button onClick={() => changePokemonIndex(Number(pokemonIndex) - 1)}>
         <FontAwesomeIcon icon={faArrowDown} />
       </Button>
       <span>
@@ -16,10 +18,10 @@ const Controls = ({ pokemonIndex, changePokemonIndex }) => {
           type="text"
           className="input"
           value={pokemonIndex}
-          onChange={(e) => changePokemonIndex(e.target.value)}
+          onChange={(e) => changePokemonIndex(Number(e.target.value))}
         />
       </span>
-      <Button onClick={() => changePokemonIndex(pokemonIndex + 1)}>
+      <Button onClick={() => changePokemonIndex(Number(pokemonIndex) + 1)}>
         <FontAwesomeIcon icon={faArrowUp} />
       </Button>
     </Container>

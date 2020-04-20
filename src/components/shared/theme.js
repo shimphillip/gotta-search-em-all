@@ -38,7 +38,6 @@ const theme = {
       display: flex;
       justify-content: center;
       align-items: center;
-    //   transform: rotate(60deg);
       color: black;
       padding: 1px;
       border-color: #b06868;
