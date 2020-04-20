@@ -1,6 +1,6 @@
 import React from 'react';
 import Container from './styles';
-import PokeBall from '../../../shared/PokeBall'
+import { PokeBall } from '../../../shared/';
 
 const EvolutionSprite = ({ image, stage, name = 'No Data' }) => {
   return (

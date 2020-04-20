@@ -3,8 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faVenus, faUndo } from '@fortawesome/free-solid-svg-icons';
 import Container from './styles';
 import { Button } from '../../shared';
-import PokeBall from '../../shared/PokeBall';
-import Loading from '../../shared/Loading';
+import { Loading, PokeBall } from '../../shared';
 
 const Sprite = ({ sprites = {}, name, loading }) => {
   const [sprite, setSprite] = useState({
