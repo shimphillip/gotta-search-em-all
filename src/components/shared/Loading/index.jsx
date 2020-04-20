@@ -4,14 +4,14 @@ import Container from './styles';
 const Loading = () => {
   return (
     <Container>
-      <div class="pokeball">
-        <div class="glow"></div>
-        <div class="lower-half"></div>
-        <div class="lower-half lh2"></div>
-        <div class="circle-out">
-          <div class="circle-in"></div>
+      <div className="pokeball">
+        <div className="glow"></div>
+        <div className="lower-half"></div>
+        <div className="lower-half lh2"></div>
+        <div className="circle-out">
+          <div className="circle-in"></div>
         </div>
-        <div class="shadow"></div>
+        <div className="shadow"></div>
       </div>
     </Container>
   );

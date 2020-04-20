@@ -7,11 +7,11 @@ const bounce = keyframes`
   }
 
   40%, 43% {
-    transform: translate3d(0, -30px, 0);
+    transform: translate3d(5px, -30px, 7px);
   }
 
   70% {
-    transform: translate3d(0, -15px, 0);
+    transform: translate3d(15px, -15px, 12px);
   }
 
   90% {
