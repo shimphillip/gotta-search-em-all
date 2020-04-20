@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 const Moves = ({ moves = [] }) => {
-  const [moveIndex, setMoveIndex] = useState(0);
+  const [moveIndex, setMoveIndex] = useState(getRandomMoveOnLoad());
   const [moveInfo, setMoveInfo] = useState({});
   const [loading, setLoading] = useState(true);
 
@@ -62,6 +62,11 @@ const Moves = ({ moves = [] }) => {
       learnMethod,
       moveDescription,
     });
+  }
+
+  function getRandomMoveOnLoad() {
+    // the least amount of moves a pokemon can have is 5
+    return Math.floor(Math.random() * 5);
   }
 
   const handleNegativeIndex = () => {
