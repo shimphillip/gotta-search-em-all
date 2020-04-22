@@ -5,4 +5,3 @@ import Loading from './Loading'
 import theme from './theme'
 
 export { TypeBadge, Button, PokeBall, Loading, theme }
-export type ThemeProps = import('./theme').ThemeProps

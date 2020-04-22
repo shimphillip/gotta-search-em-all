@@ -1,7 +1,6 @@
-import styled from '@emotion/styled'
-import { ThemeProps } from './shared'
+import styled from '../styled'
 
-const Container = styled.div<ThemeProps>`
+const Container = styled.div`
   width: 850px;
   background: ${({ theme }) => theme.colors.pokedexColor};
   ${({ theme }) => theme.darkBorders};
