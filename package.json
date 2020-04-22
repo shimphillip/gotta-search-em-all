@@ -40,7 +40,7 @@
   },
   "lint-staged": {
     "*.+(js|jsx)": [
-      "eslint --fix",
+      "eslint --fix && prettier --write",
       "git add"
     ],
     "*.+(json|css|md)": [
