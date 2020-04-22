@@ -1,7 +1,11 @@
 import React from 'react'
 import Container from './styles'
 
-const PokeBall = ({ nameClass }) => {
+export type PokeBallProps = {
+  nameClass: string
+}
+
+const PokeBall = ({ nameClass }: PokeBallProps) => {
   return <Container nameClass={nameClass}></Container>
 }
 

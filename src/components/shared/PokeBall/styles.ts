@@ -1,6 +1,7 @@
-import styled from '@emotion/styled'
+import styled from 'styled'
+import { PokeBallProps } from './'
 
-const Container = styled.div`
+const Container = styled.div<PokeBallProps>`
   ${({ theme }) => theme.spriteScreen}
   background: linear-gradient(15deg, #83887b 64%, #8b8f81 70%, #8b8f81 81%, #babfb1 86%, #8b8f81 89%, #8b8f81 100%);
   position: relative;

@@ -1,4 +1,4 @@
-import styled from '@emotion/styled'
+import styled from 'styled'
 
 // credit goes to https://codepen.io/animeshk874/pen/WGpAkj
 const Container = styled.div`

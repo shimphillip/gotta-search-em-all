@@ -1,4 +1,4 @@
-import styled from '../styled'
+import styled from 'styled'
 
 const Container = styled.div`
   width: 850px;
