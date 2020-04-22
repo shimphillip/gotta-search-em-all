@@ -4,9 +4,9 @@ export const padTexts = (
   symbol: string,
   length: number
 ) => {
-  value = value || '0';
-  value = value.toString();
+  value = value || '0'
+  value = value.toString()
 
   return `
-      ${name}${symbol.repeat(length - (value.length + name.length))}${value}`;
-};
+      ${name}${symbol.repeat(length - (value.length + name.length))}${value}`
+}

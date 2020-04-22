@@ -19,4 +19,4 @@ export const typeColors = {
   fairy: '#dca0ce',
   unknown: '#545454',
   shadow: '#364163',
-};
+}
