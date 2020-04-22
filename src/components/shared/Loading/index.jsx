@@ -1,5 +1,5 @@
-import React from 'react';
-import Container from './styles';
+import React from 'react'
+import Container from './styles'
 
 const Loading = () => {
   return (
@@ -14,7 +14,7 @@ const Loading = () => {
         <div className="shadow"></div>
       </div>
     </Container>
-  );
-};
+  )
+}
 
-export default Loading;
+export default Loading

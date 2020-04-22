@@ -1,60 +1,60 @@
-import React, { useState, useEffect } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faVenus, faUndo } from '@fortawesome/free-solid-svg-icons';
-import Container from './styles';
-import { Button } from '../../shared';
-import { Loading, PokeBall } from '../../shared';
+import React, { useState, useEffect } from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faVenus, faUndo } from '@fortawesome/free-solid-svg-icons'
+import Container from './styles'
+import { Button } from '../../shared'
+import { Loading, PokeBall } from '../../shared'
 
 const Sprite = ({ sprites = {}, name, loading }) => {
   const [sprite, setSprite] = useState({
     front: true,
     female: false,
     shiny: false,
-  });
-  const [src, setSrc] = useState('');
-  const [error, setError] = useState(false);
+  })
+  const [src, setSrc] = useState('')
+  const [error, setError] = useState(false)
 
   useEffect(() => {
-    const source = buildImage(sprite);
-    setSrc(sprites[source]);
-  }, [sprite, sprites]);
+    const source = buildImage(sprite)
+    setSrc(sprites[source])
+  }, [sprite, sprites])
 
   function buildImage(sprite) {
-    const dir = sprite.front ? 'front' : 'back';
-    const shiny = sprite.shiny ? '_shiny' : '_default';
-    const gender = sprite.female ? '_female' : '';
+    const dir = sprite.front ? 'front' : 'back'
+    const shiny = sprite.shiny ? '_shiny' : '_default'
+    const gender = sprite.female ? '_female' : ''
 
     if (shiny === '_default' && gender === '_female') {
-      return dir + gender;
+      return dir + gender
     }
-    return dir + shiny + gender;
+    return dir + shiny + gender
   }
 
   const handleChange = (prop) => {
     // make a copy and update its state
-    const spriteCopy = { ...sprite, [prop]: !sprite[prop] };
-    const source = buildImage(spriteCopy);
+    const spriteCopy = { ...sprite, [prop]: !sprite[prop] }
+    const source = buildImage(spriteCopy)
     if (!sprites[source]) {
-      setError(true);
+      setError(true)
 
       return setTimeout(() => {
-        setError(false);
-      }, 500);
+        setError(false)
+      }, 500)
     }
 
-    setSprite({ ...sprite, [prop]: !sprite[prop] });
-  };
+    setSprite({ ...sprite, [prop]: !sprite[prop] })
+  }
 
   const renderScreen = () => {
     if (loading) {
-      return <Loading />;
+      return <Loading />
     }
     if (src) {
-      return <img src={src} alt={name} />;
+      return <img src={src} alt={name} />
     }
 
-    return <PokeBall nameClass="bigScreen" />;
-  };
+    return <PokeBall nameClass="bigScreen" />
+  }
 
   return (
     <Container error={error}>
@@ -71,7 +71,7 @@ const Sprite = ({ sprites = {}, name, loading }) => {
         </Button>
       </div>
     </Container>
-  );
-};
+  )
+}
 
-export default Sprite;
+export default Sprite

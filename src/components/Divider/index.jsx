@@ -1,5 +1,5 @@
-import React from 'react';
-import Container from './styles';
+import React from 'react'
+import Container from './styles'
 
 const Divider = () => {
   return (
@@ -12,7 +12,7 @@ const Divider = () => {
       <div className="hinge"></div>
       <div className="gap"></div>
     </Container>
-  );
-};
+  )
+}
 
-export default Divider;
+export default Divider

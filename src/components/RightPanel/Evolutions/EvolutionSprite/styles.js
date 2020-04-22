@@ -1,4 +1,4 @@
-import styled from '@emotion/styled';
+import styled from '@emotion/styled'
 
 const Container = styled.div`
   .center {
@@ -32,6 +32,6 @@ const Container = styled.div`
     margin-bottom: 3px;
     text-align: right;
   }
-`;
+`
 
-export default Container;
+export default Container

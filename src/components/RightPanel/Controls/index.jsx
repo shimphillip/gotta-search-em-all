@@ -1,8 +1,8 @@
-import React from 'react';
-import Container from './styles';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowUp, faArrowDown } from '@fortawesome/free-solid-svg-icons';
-import { Button } from '../../shared';
+import React from 'react'
+import Container from './styles'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowUp, faArrowDown } from '@fortawesome/free-solid-svg-icons'
+import { Button } from '../../shared'
 
 const Controls = ({ pokemonIndex, changePokemonIndex }) => {
   return (
@@ -23,7 +23,7 @@ const Controls = ({ pokemonIndex, changePokemonIndex }) => {
         <FontAwesomeIcon icon={faArrowUp} />
       </Button>
     </Container>
-  );
-};
+  )
+}
 
-export default Controls;
+export default Controls

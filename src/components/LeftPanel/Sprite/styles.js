@@ -1,5 +1,5 @@
-import styled from '@emotion/styled';
-import { keyframes } from '@emotion/core';
+import styled from '@emotion/styled'
+import { keyframes } from '@emotion/core'
 
 const bounce = keyframes`
   from, 20%, 53%, 80%, to {
@@ -17,7 +17,7 @@ const bounce = keyframes`
   90% {
     transform: translate3d(0,-4px,0);
   }
-`;
+`
 
 const Container = styled.div`
   img {
@@ -31,6 +31,6 @@ const Container = styled.div`
     justify-content: space-around;
     margin-bottom: 10px;
   }
-`;
+`
 
-export default Container;
+export default Container

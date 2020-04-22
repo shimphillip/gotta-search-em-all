@@ -1,4 +1,4 @@
-import styled from '@emotion/styled';
+import styled from '@emotion/styled'
 
 const Container = styled.div`
   ${({ theme }) => theme.spriteScreen}
@@ -52,6 +52,6 @@ const Container = styled.div`
       54px 84px;
     transform: rotate(0);
   }
-`;
+`
 
-export default Container;
+export default Container

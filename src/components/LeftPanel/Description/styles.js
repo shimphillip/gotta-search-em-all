@@ -1,4 +1,4 @@
-import styled from '@emotion/styled';
+import styled from '@emotion/styled'
 
 const Container = styled.div`
   ${({ theme }) => theme.screen}
@@ -6,6 +6,6 @@ const Container = styled.div`
   letter-spacing: 0;
   min-height: 115px;
   flex: 1;
-`;
+`
 
 export default Container

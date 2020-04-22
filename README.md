@@ -65,4 +65,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 3. https://nostalgic-css.github.io/NES.css/ Pokeball sprites frm Nes.css
 
-4. https://github.com/klaussinani/hyper-pokemon Background wallpaper 
+4. https://github.com/klaussinani/hyper-pokemon Background wallpaper

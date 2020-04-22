@@ -1,10 +1,10 @@
-import React from 'react';
-import styled from '@emotion/styled';
-import { Global, css } from '@emotion/core';
-import { ThemeProvider } from 'emotion-theming';
-import Pokedex from './components/Pokedex';
-import theme from './components/shared/theme';
-import pikachu from './assets/pikachu.png';
+import React from 'react'
+import styled from '@emotion/styled'
+import { Global, css } from '@emotion/core'
+import { ThemeProvider } from 'emotion-theming'
+import Pokedex from './components/Pokedex'
+import theme from './components/shared/theme'
+import pikachu from './assets/pikachu.png'
 
 const AppContainer = styled.div`
   position: absolute;
@@ -24,7 +24,7 @@ const AppContainer = styled.div`
       color: #df1c18;
     }
   }
-`;
+`
 
 const App = () => (
   <ThemeProvider theme={theme}>
@@ -58,6 +58,6 @@ const App = () => (
       <Pokedex />
     </AppContainer>
   </ThemeProvider>
-);
+)
 
-export default App;
+export default App

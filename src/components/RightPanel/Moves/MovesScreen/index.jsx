@@ -1,8 +1,8 @@
-import React from 'react';
-import Container from './styles';
-import { padTexts } from '../../../../helpers';
-import { TypeBadge } from '../../../shared';
-import { Loading } from '../../../shared';
+import React from 'react'
+import Container from './styles'
+import { padTexts } from '../../../../helpers'
+import { TypeBadge } from '../../../shared'
+import { Loading } from '../../../shared'
 
 const MovesScreen = ({ moveInfo, loading }) => {
   const {
@@ -16,7 +16,7 @@ const MovesScreen = ({ moveInfo, loading }) => {
     effectDescription,
     learnMethod,
     moveDescription,
-  } = moveInfo;
+  } = moveInfo
 
   return (
     <Container>
@@ -57,7 +57,7 @@ const MovesScreen = ({ moveInfo, loading }) => {
         </>
       )}
     </Container>
-  );
-};
+  )
+}
 
-export default MovesScreen;
+export default MovesScreen

@@ -1,4 +1,4 @@
-import styled from '@emotion/styled';
+import styled from '@emotion/styled'
 
 const Container = styled.div`
   display: flex;
@@ -54,6 +54,6 @@ const Container = styled.div`
     width: 100%;
     border-left-color: #5f1010;
   }
-`;
+`
 
-export default Container;
+export default Container

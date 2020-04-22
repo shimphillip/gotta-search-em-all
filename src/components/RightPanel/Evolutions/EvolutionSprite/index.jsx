@@ -1,6 +1,6 @@
-import React from 'react';
-import Container from './styles';
-import { PokeBall } from '../../../shared/';
+import React from 'react'
+import Container from './styles'
+import { PokeBall } from '../../../shared/'
 
 const EvolutionSprite = ({ image, stage, name = 'No Data' }) => {
   return (
@@ -12,7 +12,7 @@ const EvolutionSprite = ({ image, stage, name = 'No Data' }) => {
       {!image && <PokeBall />}
       <div className="name">{name}</div>
     </Container>
-  );
-};
+  )
+}
 
-export default EvolutionSprite;
+export default EvolutionSprite

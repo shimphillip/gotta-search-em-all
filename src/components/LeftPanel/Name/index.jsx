@@ -1,5 +1,5 @@
-import React from 'react';
-import Container from './styles';
+import React from 'react'
+import Container from './styles'
 
 const Name = ({ name, pokemonIndex }) => {
   return (
@@ -7,7 +7,7 @@ const Name = ({ name, pokemonIndex }) => {
       <p>{name}</p>
       <p>no. {pokemonIndex}</p>
     </Container>
-  );
-};
+  )
+}
 
-export default Name;
+export default Name

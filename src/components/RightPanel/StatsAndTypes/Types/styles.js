@@ -1,4 +1,4 @@
-import styled from '@emotion/styled';
+import styled from '@emotion/styled'
 
 const Container = styled.div`
   display: flex;
@@ -27,6 +27,6 @@ const Container = styled.div`
     border-width: 3px 2px;
     text-shadow: #fd5555 -1px 1px;
   }
-`;
+`
 
-export default Container;
+export default Container

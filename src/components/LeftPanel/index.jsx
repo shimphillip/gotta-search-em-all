@@ -1,8 +1,8 @@
-import React from 'react';
-import Container from './styles';
-import Name from './Name';
-import Sprite from './Sprite';
-import Description from './Description';
+import React from 'react'
+import Container from './styles'
+import Name from './Name'
+import Sprite from './Sprite'
+import Description from './Description'
 
 const LeftPanel = ({ pokemon, loading }) => {
   // console.log(pokemon);
@@ -10,7 +10,7 @@ const LeftPanel = ({ pokemon, loading }) => {
     pokemonData: { name, sprites },
     pokemonIndex,
     pokemonDescription,
-  } = pokemon;
+  } = pokemon
 
   return (
     <Container>
@@ -18,7 +18,7 @@ const LeftPanel = ({ pokemon, loading }) => {
       <Sprite sprites={sprites} name={name} loading={loading} />
       <Description description={pokemonDescription} />
     </Container>
-  );
-};
+  )
+}
 
-export default LeftPanel;
+export default LeftPanel

@@ -47,6 +47,6 @@ const theme = {
           border-color: #b8ed7c;
       }
     `,
-};
+}
 
-export default theme;
+export default theme

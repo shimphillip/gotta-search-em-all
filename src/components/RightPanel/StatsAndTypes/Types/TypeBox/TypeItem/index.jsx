@@ -1,8 +1,8 @@
-import React from 'react';
-import { TypeBadge } from '../../../../../shared';
+import React from 'react'
+import { TypeBadge } from '../../../../../shared'
 
 const TypeItem = ({ name }) => {
-  return <TypeBadge name={name}>{name}</TypeBadge>;
-};
+  return <TypeBadge name={name}>{name}</TypeBadge>
+}
 
-export default TypeItem;
+export default TypeItem

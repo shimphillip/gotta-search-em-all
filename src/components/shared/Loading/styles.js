@@ -1,4 +1,4 @@
-import styled from '@emotion/styled';
+import styled from '@emotion/styled'
 
 // credit goes to https://codepen.io/animeshk874/pen/WGpAkj
 const Container = styled.div`
@@ -108,6 +108,6 @@ const Container = styled.div`
       background: white;
     }
   }
-`;
+`
 
-export default Container;
+export default Container

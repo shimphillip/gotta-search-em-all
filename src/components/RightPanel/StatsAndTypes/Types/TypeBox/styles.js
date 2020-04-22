@@ -1,4 +1,4 @@
-import styled from '@emotion/styled';
+import styled from '@emotion/styled'
 
 const Container = styled.div`
   display: flex;
@@ -7,6 +7,6 @@ const Container = styled.div`
   justify-content: space-evenly;
   background: linear-gradient(14deg, #afafaf 50%, #ffffff 80%, #afafaf 90%);
   border-top: groove #757575 3px;
-`;
+`
 
-export default Container;
+export default Container

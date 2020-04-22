@@ -1,16 +1,16 @@
-import React from 'react';
-import Container from './styles';
-import StatsAndTypes from './StatsAndTypes';
-import Evolutions from './Evolutions';
-import Moves from './Moves';
-import Controls from './Controls';
+import React from 'react'
+import Container from './styles'
+import StatsAndTypes from './StatsAndTypes'
+import Evolutions from './Evolutions'
+import Moves from './Moves'
+import Controls from './Controls'
 
 const RightPanel = ({ pokemon, pokemonIndex, changePokemonIndex }) => {
   const {
     pokemonData: { types, stats, moves },
     evolutionSprites,
     evolutionNames,
-  } = pokemon;
+  } = pokemon
 
   return (
     <Container>
@@ -25,7 +25,7 @@ const RightPanel = ({ pokemon, pokemonIndex, changePokemonIndex }) => {
         changePokemonIndex={changePokemonIndex}
       />
     </Container>
-  );
-};
+  )
+}
 
-export default RightPanel;
+export default RightPanel

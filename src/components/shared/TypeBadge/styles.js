@@ -1,5 +1,5 @@
-import styled from '@emotion/styled';
-import { typeColors } from '../../../helpers';
+import styled from '@emotion/styled'
+import { typeColors } from '../../../helpers'
 
 const TypeBadge = styled.div`
   color: rgba(0, 0, 0, 0.9);
@@ -26,6 +26,6 @@ const TypeBadge = styled.div`
   );
   background-blend-mode: hard-light;
   background-color: ${(props) => typeColors[props.name]};
-`;
+`
 
 export default TypeBadge

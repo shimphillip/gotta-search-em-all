@@ -1,6 +1,6 @@
-import React from 'react';
-import Container from './styles';
-import TypeBox from './TypeBox';
+import React from 'react'
+import Container from './styles'
+import TypeBox from './TypeBox'
 
 const Types = ({ types }) => {
   return (
@@ -8,7 +8,7 @@ const Types = ({ types }) => {
       <div className="type-header">Types</div>
       <TypeBox types={types} />
     </Container>
-  );
-};
+  )
+}
 
-export default Types;
+export default Types

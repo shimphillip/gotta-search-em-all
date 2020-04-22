@@ -1,4 +1,4 @@
-import styled from '@emotion/styled';
+import styled from '@emotion/styled'
 
 const Button = styled.button`
   height: 35px;
@@ -39,6 +39,6 @@ const Button = styled.button`
         text-shadow: white -1px 1px;
   `
       : null}
-`;
+`
 
-export default Button;
+export default Button
