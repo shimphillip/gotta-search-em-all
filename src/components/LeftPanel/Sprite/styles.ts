@@ -27,7 +27,7 @@ const Container = styled.div<ContainerProps>`
   img {
     ${({ theme }) => theme.spriteScreen}
   }
-  /* Bounce twice if action is not avaliable */
+  /* Bounce twice if no sprite is avaliable */
   animation: ${bounce} ${({ error }) => (error ? '0.3s' : '0s')} ease infinite;
 
   .controls {

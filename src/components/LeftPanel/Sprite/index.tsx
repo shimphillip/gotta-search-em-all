@@ -4,45 +4,49 @@ import { faVenus, faUndo } from '@fortawesome/free-solid-svg-icons'
 import Container from './styles'
 import { Button } from '../../shared'
 import { Loading, PokeBall } from '../../shared'
+import { SpriteComponentProps, SpriteStateProps } from './types'
 
-const Sprite = ({ sprites = {}, name, loading }) => {
-  const [sprite, setSprite] = useState({
+const Sprite = ({ sprites, name, loading }: SpriteComponentProps) => {
+  const [sprite, setSprite] = useState<SpriteStateProps>({
     front: true,
     female: false,
     shiny: false,
   })
-  const [src, setSrc] = useState('')
+  const [src, setSrc] = useState<string | null>('')
   const [error, setError] = useState(false)
 
   useEffect(() => {
-    const source = buildImage(sprite)
-    setSrc(sprites[source])
+    if (sprites) {
+      const source = buildImage(sprite)
+      setSrc(sprites[source])
+    }
   }, [sprite, sprites])
 
-  function buildImage(sprite) {
-    const dir = sprite.front ? 'front' : 'back'
-    const shiny = sprite.shiny ? '_shiny' : '_default'
-    const gender = sprite.female ? '_female' : ''
+  function buildImage({ front, shiny, female }: SpriteStateProps): string {
+    const direction = front ? 'front' : 'back'
+    const light = shiny ? '_shiny' : '_default'
+    const gender = female ? '_female' : ''
 
-    if (shiny === '_default' && gender === '_female') {
-      return dir + gender
+    if (light === '_default' && gender === '_female') {
+      return direction + gender
     }
-    return dir + shiny + gender
+    return direction + light + gender
   }
 
-  const handleChange = (prop) => {
+  const handleChange = (attribute: string) => {
     // make a copy and update its state
-    const spriteCopy = { ...sprite, [prop]: !sprite[prop] }
+    const spriteCopy = { ...sprite, [attribute]: !sprite[attribute] }
     const source = buildImage(spriteCopy)
-    if (!sprites[source]) {
-      setError(true)
 
+    // run the bounce animiation if there is no avaliable sprite
+    if (sprites && !sprites[source]) {
+      setError(true)
       return setTimeout(() => {
         setError(false)
       }, 500)
     }
 
-    setSprite({ ...sprite, [prop]: !sprite[prop] })
+    return setSprite({ ...sprite, [attribute]: !sprite[attribute] })
   }
 
   const renderScreen = () => {
