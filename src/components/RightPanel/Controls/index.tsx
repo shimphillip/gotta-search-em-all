@@ -4,7 +4,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowUp, faArrowDown } from '@fortawesome/free-solid-svg-icons'
 import { Button } from '../../shared'
 
-const Controls = ({ pokemonIndex, changePokemonIndex }) => {
+type ControlsProps = {
+  pokemonIndex: number | string
+  changePokemonIndex: (newIndex: number) => void
+}
+
+const Controls = ({ pokemonIndex, changePokemonIndex }: ControlsProps) => {
   return (
     <Container>
       <Button onClick={() => changePokemonIndex(Number(pokemonIndex) - 1)}>

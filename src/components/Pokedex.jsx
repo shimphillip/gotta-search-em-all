@@ -24,7 +24,7 @@ const Pokedex = () => {
   useEffect(() => {
     changePokemon(pokemonIndex)
     localStorage.setItem('pokemonIndex', pokemonIndex)
-  }, [pokemonIndex])
+  }, [changePokemon, pokemonIndex])
 
   async function changePokemon(pokemonIndex) {
     try {
@@ -105,7 +105,7 @@ const Pokedex = () => {
       return
     }
 
-    setPokemonIndex(newIndex)
+    return setPokemonIndex(newIndex)
   }
 
   return (
