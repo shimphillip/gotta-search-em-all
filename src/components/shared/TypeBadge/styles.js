@@ -1,4 +1,4 @@
-import styled from '@emotion/styled'
+import styled from 'styled'
 import { typeColors } from '../../../helpers'
 
 const TypeBadge = styled.div`

@@ -1,4 +1,4 @@
-import styled from '@emotion/styled'
+import styled from 'styled'
 
 const Container = styled.div`
   ${({ theme }) => theme.lightBorders}
