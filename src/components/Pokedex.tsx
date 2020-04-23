@@ -7,26 +7,94 @@ import { pokemonAPI, pickRandom } from '../helpers'
 
 const NUMBER_OF_POKEMONS = 807
 
+export interface PokemonProps {
+  pokemonData: {
+    name: string
+    sprites: {
+      back_female: string | null
+      back_shiny_female: string | null
+      back_default: string | null
+      front_female: string | null
+      front_shiny_female: string | null
+      back_shiny: string | null
+      front_default: string | null
+      front_shiny: string | null
+      [key: string]: string | null
+    }
+    types: TypeProps[]
+    stats: Stat[]
+    moves: MovesProps[]
+  }
+  pokemonDescription: string
+  speciesData: SpeciesDataProps
+  evolutionSprites: string[]
+  evolutionNames: string[]
+}
+
+interface SpeciesDataProps {
+  flavor_text_entries: FlavorTextEntriesProps[]
+  evolution_chain: {
+    url: string
+  }
+}
+
+interface FlavorTextEntriesProps {
+  language: {
+    name: string
+  }
+  flavor_text: string
+}
+
+type TypeProps = {
+  type: {
+    name: string
+  }
+}
+
+type Stat = {
+  stat: {
+    name: string
+  }
+  base_stat: number
+}
+
+type MovesProps = {
+  move: {
+    name: string
+    url: string
+  }
+  version_group_details: VersionGroupDetails[]
+}
+
+type VersionGroupDetails = {
+  level_learned_at: number
+  move_learn_method: {
+    name: string
+  }
+}
+
+type ChangePokemonIndex = (newIndex: number) => void
+
+const getLocalStorage = (key: string) => {
+  if (!localStorage.getItem(key)) {
+    return 25
+  }
+  return Number(localStorage.getItem(key))
+}
+
 const Pokedex = () => {
-  const [pokemon, setPokemon] = useState({
-    pokemonData: {},
-    pokemonDescription: '',
-    speciesData: {},
-    evolutionSprites: [],
-    evolutionNames: [],
-    moves: [],
-  })
+  const [pokemon, setPokemon] = useState<PokemonProps | undefined>(undefined)
   const [pokemonIndex, setPokemonIndex] = useState(
-    localStorage.getItem('pokemonIndex') || 25
+    getLocalStorage('pokemonIndex')
   )
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     changePokemon(pokemonIndex)
-    localStorage.setItem('pokemonIndex', pokemonIndex)
-  }, [changePokemon, pokemonIndex])
+    localStorage.setItem('pokemonIndex', pokemonIndex.toString())
+  }, [pokemonIndex])
 
-  async function changePokemon(pokemonIndex) {
+  async function changePokemon(pokemonIndex: number) {
     try {
       setLoading(true)
       const pokemonData = await fetch(
@@ -34,11 +102,10 @@ const Pokedex = () => {
       ).then((response) => response.json())
 
       const speciesRequest = pokemonData.species.url
-      const moves = pokemonData.moves
 
-      const speciesData = await fetch(speciesRequest).then((response) =>
-        response.json()
-      )
+      const speciesData: SpeciesDataProps = await fetch(
+        speciesRequest
+      ).then((response) => response.json())
 
       const flavorTexts = speciesData.flavor_text_entries
         .filter((entry) => entry.language.name === 'en')
@@ -85,12 +152,10 @@ const Pokedex = () => {
             setPokemon({
               ...pokemon,
               pokemonData,
-              pokemonIndex,
               speciesData,
               pokemonDescription: description,
               evolutionSprites: sprites,
               evolutionNames: names,
-              moves,
             })
           }
         )
@@ -100,7 +165,7 @@ const Pokedex = () => {
     }
   }
 
-  const changePokemonIndex = (newIndex) => {
+  const changePokemonIndex: ChangePokemonIndex = (newIndex) => {
     if (newIndex < 0 || newIndex > NUMBER_OF_POKEMONS) {
       return
     }
@@ -111,7 +176,11 @@ const Pokedex = () => {
   return (
     <Container>
       <div className="inner-container">
-        <LeftPanel pokemon={pokemon} loading={loading} />
+        <LeftPanel
+          pokemon={pokemon}
+          loading={loading}
+          pokemonIndex={pokemonIndex}
+        />
         <Divider />
         <RightPanel
           pokemon={pokemon}

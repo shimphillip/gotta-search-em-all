@@ -4,6 +4,7 @@ import StatsAndTypes from './StatsAndTypes'
 import Evolutions from './Evolutions'
 import Moves from './Moves'
 import Controls from './Controls'
+import { PokemonProps } from '../Pokedex'
 
 type TypeProps = {
   type: {
@@ -21,15 +22,7 @@ type Stat = {
 type ChangePokemonIndex = (newIndex: number) => void
 
 type RightPanelProps = {
-  pokemon: {
-    pokemonData: {
-      types: TypeProps[]
-      stats: Stat[]
-      moves: MovesProps[]
-    }
-    evolutionSprites: string[]
-    evolutionNames: string[]
-  }
+  pokemon?: PokemonProps
   pokemonIndex: number
   changePokemonIndex: ChangePokemonIndex
 }
@@ -54,6 +47,10 @@ const RightPanel = ({
   pokemonIndex,
   changePokemonIndex,
 }: RightPanelProps) => {
+  if (!pokemon) {
+    return <div></div>
+  }
+
   const {
     pokemonData: { types, stats, moves },
     evolutionSprites,

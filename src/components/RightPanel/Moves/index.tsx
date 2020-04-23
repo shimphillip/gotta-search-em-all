@@ -45,6 +45,8 @@ type EntryProps = {
   flavor_text: string
 }
 
+// todo dynamically randomize moveIndex based on the length of the array
+
 const Moves = ({ moves }: MovesProps) => {
   const [moveIndex, setMoveIndex] = useState(0)
   const [moveInfo, setMoveInfo] = useState<MoveInfoProps | undefined>(undefined)
