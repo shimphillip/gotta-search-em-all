@@ -1,6 +1,10 @@
 import styled from 'styled'
 import { keyframes } from '@emotion/core'
 
+type ContainerProps = {
+  error: boolean
+}
+
 const bounce = keyframes`
   from, 20%, 53%, 80%, to {
     transform: translate3d(0,0,0);
@@ -19,12 +23,12 @@ const bounce = keyframes`
   }
 `
 
-const Container = styled.div`
+const Container = styled.div<ContainerProps>`
   img {
     ${({ theme }) => theme.spriteScreen}
   }
   /* Bounce twice if action is not avaliable */
-  animation: ${bounce} ${(props) => (props.error ? '0.3s' : '0s')} ease infinite;
+  animation: ${bounce} ${({ error }) => (error ? '0.3s' : '0s')} ease infinite;
 
   .controls {
     display: flex;

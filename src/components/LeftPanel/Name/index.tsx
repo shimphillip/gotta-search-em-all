@@ -1,7 +1,12 @@
 import React from 'react'
 import Container from './styles'
 
-const Name = ({ name, pokemonIndex }) => {
+type NameProps = {
+  name: string
+  pokemonIndex: number
+}
+
+const Name = ({ name, pokemonIndex }: NameProps) => {
   return (
     <Container>
       <p>{name}</p>

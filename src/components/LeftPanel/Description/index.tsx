@@ -1,7 +1,11 @@
 import React from 'react'
 import Container from './styles'
 
-const Description = ({ description }) => {
+type DescriptionProps = {
+  description: string
+}
+
+const Description = ({ description }: DescriptionProps) => {
   return <Container>{description}</Container>
 }
 
