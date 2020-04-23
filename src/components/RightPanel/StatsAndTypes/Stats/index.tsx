@@ -2,7 +2,18 @@ import React from 'react'
 import Container from './styles'
 import StatLine from './StatLine'
 
-const Stats = ({ stats = [] }) => {
+type StatsProps = {
+  stats: Stat[]
+}
+
+type Stat = {
+  stat: {
+    name: string
+  }
+  base_stat: number
+}
+
+const Stats = ({ stats = [] }: StatsProps) => {
   return (
     <Container>
       {stats.map((stat) => {

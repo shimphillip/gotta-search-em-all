@@ -1,7 +1,11 @@
 import styled from 'styled'
 import { typeColors } from '../../../helpers'
 
-const TypeBadge = styled.div`
+type TypeBadgeProps = {
+  name: string
+}
+
+const TypeBadge = styled.div<TypeBadgeProps>`
   color: rgba(0, 0, 0, 0.9);
   text-transform: capitalize;
   font-size: 1.25em;
@@ -25,7 +29,7 @@ const TypeBadge = styled.div`
     rgba(230, 230, 230, 0.5) 100%
   );
   background-blend-mode: hard-light;
-  background-color: ${(props) => typeColors[props.name]};
+  background-color: ${({ name }) => typeColors[name]};
 `
 
 export default TypeBadge

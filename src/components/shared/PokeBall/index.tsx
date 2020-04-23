@@ -2,7 +2,7 @@ import React from 'react'
 import Container from './styles'
 
 export type PokeBallProps = {
-  nameClass: string
+  nameClass?: string
 }
 
 const PokeBall = ({ nameClass }: PokeBallProps) => {

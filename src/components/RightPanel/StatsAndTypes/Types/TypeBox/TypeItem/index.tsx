@@ -1,7 +1,11 @@
 import React from 'react'
 import { TypeBadge } from '../../../../../shared'
 
-const TypeItem = ({ name }) => {
+type TypeItemProps = {
+  name: string
+}
+
+const TypeItem = ({ name }: TypeItemProps) => {
   return <TypeBadge name={name}>{name}</TypeBadge>
 }
 

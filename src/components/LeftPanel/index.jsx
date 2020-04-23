@@ -5,7 +5,6 @@ import Sprite from './Sprite'
 import Description from './Description'
 
 const LeftPanel = ({ pokemon, loading }) => {
-  // console.log(pokemon);
   const {
     pokemonData: { name, sprites },
     pokemonIndex,

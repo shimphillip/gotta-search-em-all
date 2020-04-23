@@ -2,7 +2,17 @@ import React from 'react'
 import Container from './styles'
 import TypeItem from './TypeItem'
 
-const TypeBox = ({ types = [] }) => {
+type TypeProps = {
+  type: {
+    name: string
+  }
+}
+
+type TypeBoxProps = {
+  types: TypeProps[]
+}
+
+const TypeBox = ({ types = [] }: TypeBoxProps) => {
   return (
     <Container>
       {types.map(({ type: { name } }) => {

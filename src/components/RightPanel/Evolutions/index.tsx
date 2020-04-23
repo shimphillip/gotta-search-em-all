@@ -2,7 +2,12 @@ import React from 'react'
 import Container from './styles'
 import EvolutionSprite from './EvolutionSprite'
 
-const Evolutions = ({ evolutionSprites, evolutionNames }) => {
+type EvolutionProps = {
+  evolutionSprites: string[]
+  evolutionNames: string[]
+}
+
+const Evolutions = ({ evolutionSprites, evolutionNames }: EvolutionProps) => {
   const sprite1 = evolutionSprites[0]
   const sprite2 = evolutionSprites[1]
   const sprite3 = evolutionSprites[2]
