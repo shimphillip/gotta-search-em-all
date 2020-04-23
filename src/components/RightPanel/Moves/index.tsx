@@ -20,7 +20,7 @@ type MoveInfoProps = {
 }
 
 type MovesProps = {
-  moves: Moves[]
+  moves?: Moves[]
 }
 
 type Moves = {
@@ -46,7 +46,7 @@ type EntryProps = {
 }
 
 const Moves = ({ moves }: MovesProps) => {
-  const [moveIndex, setMoveIndex] = useState(getRandomMoveOnLoad())
+  const [moveIndex, setMoveIndex] = useState(0)
   const [moveInfo, setMoveInfo] = useState<MoveInfoProps | undefined>(undefined)
   const [loading, setLoading] = useState(true)
 
@@ -104,12 +104,11 @@ const Moves = ({ moves }: MovesProps) => {
     })
   }
 
-  // the least amount of moves a pokemon can have is 2
-  function getRandomMoveOnLoad(): number {
-    return Math.floor(Math.random() * 2)
-  }
-
   const handleNegativeIndex = (): void => {
+    if (!moves) {
+      return
+    }
+
     if (!moves[moveIndex - 1]) {
       return setMoveIndex(moves.length - 1)
     }
@@ -117,6 +116,10 @@ const Moves = ({ moves }: MovesProps) => {
   }
 
   const handlePositiveIndex = (): void => {
+    if (!moves) {
+      return
+    }
+
     if (!moves[moveIndex + 1]) {
       return setMoveIndex(0)
     }
