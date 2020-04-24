@@ -3,84 +3,15 @@ import Container from './PokedexStyles'
 import LeftPanel from './LeftPanel'
 import Divider from './Divider'
 import RightPanel from './RightPanel'
-import { pokemonAPI, pickRandom } from '../helpers'
+import {
+  pokemonAPI,
+  pickRandom,
+  getLocalStorage,
+  setLocalStorage,
+} from '../helpers'
+import { PokemonProps, SpeciesDataProps, ChangePokemonIndex } from './sharedTypes'
 
 const NUMBER_OF_POKEMONS = 807
-
-export interface PokemonProps {
-  pokemonData: {
-    name: string
-    sprites: {
-      back_female: string | null
-      back_shiny_female: string | null
-      back_default: string | null
-      front_female: string | null
-      front_shiny_female: string | null
-      back_shiny: string | null
-      front_default: string | null
-      front_shiny: string | null
-      [key: string]: string | null
-    }
-    types: TypeProps[]
-    stats: Stat[]
-    moves: MovesProps[]
-  }
-  pokemonDescription: string
-  speciesData: SpeciesDataProps
-  evolutionSprites: string[]
-  evolutionNames: string[]
-}
-
-interface SpeciesDataProps {
-  flavor_text_entries: FlavorTextEntriesProps[]
-  evolution_chain: {
-    url: string
-  }
-}
-
-interface FlavorTextEntriesProps {
-  language: {
-    name: string
-  }
-  flavor_text: string
-}
-
-type TypeProps = {
-  type: {
-    name: string
-  }
-}
-
-type Stat = {
-  stat: {
-    name: string
-  }
-  base_stat: number
-}
-
-type MovesProps = {
-  move: {
-    name: string
-    url: string
-  }
-  version_group_details: VersionGroupDetails[]
-}
-
-type VersionGroupDetails = {
-  level_learned_at: number
-  move_learn_method: {
-    name: string
-  }
-}
-
-type ChangePokemonIndex = (newIndex: number) => void
-
-const getLocalStorage = (key: string) => {
-  if (!localStorage.getItem(key)) {
-    return 25
-  }
-  return Number(localStorage.getItem(key))
-}
 
 const Pokedex = () => {
   const [pokemon, setPokemon] = useState<PokemonProps | undefined>(undefined)
@@ -91,7 +22,7 @@ const Pokedex = () => {
 
   useEffect(() => {
     changePokemon(pokemonIndex)
-    localStorage.setItem('pokemonIndex', pokemonIndex.toString())
+    setLocalStorage('pokemonIndex', pokemonIndex)
   }, [pokemonIndex])
 
   async function changePokemon(pokemonIndex: number) {

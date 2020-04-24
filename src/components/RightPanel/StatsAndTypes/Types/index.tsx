@@ -1,12 +1,7 @@
 import React from 'react'
 import Container from './styles'
 import TypeBox from './TypeBox'
-
-type TypeProps = {
-  type: {
-    name: string
-  }
-}
+import { TypeProps } from 'components/sharedTypes'
 
 type TypesProps = {
   types: TypeProps[]

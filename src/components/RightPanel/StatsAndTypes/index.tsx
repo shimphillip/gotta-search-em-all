@@ -2,19 +2,7 @@ import React from 'react'
 import Container from './styles'
 import Stats from './Stats'
 import Types from './Types'
-
-type TypeProps = {
-  type: {
-    name: string
-  }
-}
-
-type Stat = {
-  stat: {
-    name: string
-  }
-  base_stat: number
-}
+import { TypeProps, Stat } from 'components/sharedTypes'
 
 type StatsAndTypesProps = {
   stats: Stat[]

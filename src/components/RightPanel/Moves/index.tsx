@@ -5,49 +5,16 @@ import { pickRandom } from '../../../helpers'
 import { Button } from '../../shared'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons'
-
-type MoveInfoProps = {
-  name: string
-  learnedAt: string | number
-  accuracy: number
-  damageClass: string
-  power: number
-  pp: number
-  type: string
-  effectDescription: string
-  learnMethod: string
-  moveDescription: string
-}
-
-type MovesProps = {
-  moves?: Moves[]
-}
-
-type Moves = {
-  move: {
-    name: string
-    url: string
-  }
-  version_group_details: VersionGroupDetails[]
-}
-
-type VersionGroupDetails = {
-  level_learned_at: number
-  move_learn_method: {
-    name: string
-  }
-}
-
-type EntryProps = {
-  language: {
-    name: string
-  }
-  flavor_text: string
-}
+import { MoveInfoProps } from '../../sharedTypes'
+import { MovesProps, EntryProps } from './types'
 
 // todo dynamically randomize moveIndex based on the length of the array
 
-const Moves = ({ moves }: MovesProps) => {
+interface MovesComponentProps {
+  moves?: MovesProps[]
+}
+
+const Moves = ({ moves }: MovesComponentProps) => {
   const [moveIndex, setMoveIndex] = useState(0)
   const [moveInfo, setMoveInfo] = useState<MoveInfoProps | undefined>(undefined)
   const [loading, setLoading] = useState(true)
@@ -58,7 +25,7 @@ const Moves = ({ moves }: MovesProps) => {
     }
   }, [moveIndex, moves])
 
-  async function fetchMove(moves: Moves[]) {
+  async function fetchMove(moves: MovesProps[]) {
     if (!moves.length) {
       return
     }

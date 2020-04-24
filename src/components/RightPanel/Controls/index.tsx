@@ -3,16 +3,17 @@ import Container from './styles'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowUp, faArrowDown } from '@fortawesome/free-solid-svg-icons'
 import { Button } from '../../shared'
+import { ChangePokemonIndex } from '../../sharedTypes'
 
 type ControlsProps = {
-  pokemonIndex: number | string
-  changePokemonIndex: (newIndex: number) => void
+  pokemonIndex: number
+  changePokemonIndex: ChangePokemonIndex
 }
 
 const Controls = ({ pokemonIndex, changePokemonIndex }: ControlsProps) => {
   return (
     <Container>
-      <Button onClick={() => changePokemonIndex(Number(pokemonIndex) - 1)}>
+      <Button onClick={() => changePokemonIndex(pokemonIndex - 1)}>
         <FontAwesomeIcon icon={faArrowDown} />
       </Button>
       <span>
@@ -24,7 +25,7 @@ const Controls = ({ pokemonIndex, changePokemonIndex }: ControlsProps) => {
           onChange={(e) => changePokemonIndex(Number(e.target.value))}
         />
       </span>
-      <Button onClick={() => changePokemonIndex(Number(pokemonIndex) + 1)}>
+      <Button onClick={() => changePokemonIndex(pokemonIndex + 1)}>
         <FontAwesomeIcon icon={faArrowUp} />
       </Button>
     </Container>

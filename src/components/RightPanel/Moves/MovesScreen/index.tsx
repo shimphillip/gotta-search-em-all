@@ -3,20 +3,10 @@ import Container from './styles'
 import { padTexts } from '../../../../helpers'
 import { TypeBadge } from '../../../shared'
 import { Loading } from '../../../shared'
+import { MoveInfoProps } from '../../../sharedTypes'
 
-type MovesScreen = {
-  moveInfo?: {
-    name: string
-    learnedAt: string | number
-    accuracy: number
-    damageClass: string
-    power: number
-    pp: number
-    type: string
-    effectDescription: string
-    learnMethod: string
-    moveDescription: string
-  }
+interface MovesScreen {
+  moveInfo?: MoveInfoProps
   loading: boolean
 }
 
