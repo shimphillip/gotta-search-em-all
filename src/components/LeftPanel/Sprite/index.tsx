@@ -4,10 +4,17 @@ import { faVenus, faUndo } from '@fortawesome/free-solid-svg-icons'
 import Container from './styles'
 import { Button } from '../../shared'
 import { Loading, PokeBall } from '../../shared'
-import { SpriteComponentProps, SpriteStateProps } from './types'
+import { SpritesProps, SpriteProps } from './types'
+
+interface SpriteComponentProps {
+  sprites?: SpritesProps
+  name: string
+  loading: boolean
+  [key: string]: boolean | string | SpritesProps | undefined
+}
 
 const Sprite = ({ sprites, name, loading }: SpriteComponentProps) => {
-  const [sprite, setSprite] = useState<SpriteStateProps>({
+  const [sprite, setSprite] = useState<SpriteProps>({
     front: true,
     female: false,
     shiny: false,
@@ -22,7 +29,7 @@ const Sprite = ({ sprites, name, loading }: SpriteComponentProps) => {
     }
   }, [sprite, sprites])
 
-  function buildImage({ front, shiny, female }: SpriteStateProps): string {
+  function buildImage({ front, shiny, female }: SpriteProps): string {
     const direction = front ? 'front' : 'back'
     const light = shiny ? '_shiny' : '_default'
     const gender = female ? '_female' : ''

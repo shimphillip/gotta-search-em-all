@@ -5,7 +5,7 @@ import { pickRandom } from '../../../helpers'
 import { Button } from '../../shared'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons'
-import { MoveInfoProps } from '../../sharedTypes'
+import { MoveInfoProps } from '../../shared/types'
 import { MovesProps, EntryProps } from './types'
 
 // todo dynamically randomize moveIndex based on the length of the array

@@ -1,7 +1,7 @@
 import React from 'react'
 import Container from './styles'
 
-type DescriptionProps = {
+interface DescriptionProps {
   description: string
 }
 

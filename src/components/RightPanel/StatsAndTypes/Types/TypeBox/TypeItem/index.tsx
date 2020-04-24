@@ -1,7 +1,7 @@
 import React from 'react'
 import { TypeBadge } from '../../../../../shared'
 
-type TypeItemProps = {
+interface TypeItemProps {
   name: string
 }
 

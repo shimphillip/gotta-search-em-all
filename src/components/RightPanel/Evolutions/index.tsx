@@ -2,7 +2,7 @@ import React from 'react'
 import Container from './styles'
 import EvolutionSprite from './EvolutionSprite'
 
-type EvolutionProps = {
+interface EvolutionProps {
   evolutionSprites: string[]
   evolutionNames: string[]
 }

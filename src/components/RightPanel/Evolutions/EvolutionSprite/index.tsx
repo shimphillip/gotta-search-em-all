@@ -2,7 +2,7 @@ import React from 'react'
 import Container from './styles'
 import { PokeBall } from '../../../shared'
 
-type EvolutionSpriteProps = {
+interface EvolutionSpriteProps {
   image: string
   stage: string
   name: string

@@ -3,7 +3,7 @@ import Container from './styles'
 import { padTexts } from '../../../../helpers'
 import { TypeBadge } from '../../../shared'
 import { Loading } from '../../../shared'
-import { MoveInfoProps } from '../../../sharedTypes'
+import { MoveInfoProps } from '../../../shared/types'
 
 interface MovesScreen {
   moveInfo?: MoveInfoProps

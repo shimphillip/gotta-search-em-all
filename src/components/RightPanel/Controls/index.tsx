@@ -3,9 +3,9 @@ import Container from './styles'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowUp, faArrowDown } from '@fortawesome/free-solid-svg-icons'
 import { Button } from '../../shared'
-import { ChangePokemonIndex } from '../../sharedTypes'
+import { ChangePokemonIndex } from '../../shared/types'
 
-type ControlsProps = {
+interface ControlsProps {
   pokemonIndex: number
   changePokemonIndex: ChangePokemonIndex
 }

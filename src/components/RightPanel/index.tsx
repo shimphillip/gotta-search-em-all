@@ -4,9 +4,9 @@ import StatsAndTypes from './StatsAndTypes'
 import Evolutions from './Evolutions'
 import Moves from './Moves'
 import Controls from './Controls'
-import { PokemonProps, ChangePokemonIndex } from '../sharedTypes'
+import { PokemonProps, ChangePokemonIndex } from '../shared/types'
 
-type RightPanelProps = {
+interface RightPanelProps {
   pokemon?: PokemonProps
   pokemonIndex: number
   changePokemonIndex: ChangePokemonIndex

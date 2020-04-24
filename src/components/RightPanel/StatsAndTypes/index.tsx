@@ -2,9 +2,9 @@ import React from 'react'
 import Container from './styles'
 import Stats from './Stats'
 import Types from './Types'
-import { TypeProps, Stat } from 'components/sharedTypes'
+import { TypeProps, Stat } from 'components/shared/types'
 
-type StatsAndTypesProps = {
+interface StatsAndTypesProps {
   stats: Stat[]
   types: TypeProps[]
 }

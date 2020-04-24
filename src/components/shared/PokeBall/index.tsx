@@ -1,7 +1,7 @@
 import React from 'react'
 import Container from './styles'
 
-export type PokeBallProps = {
+export interface PokeBallProps {
   nameClass?: string
 }
 

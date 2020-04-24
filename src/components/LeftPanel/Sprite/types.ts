@@ -1,11 +1,4 @@
-export type SpriteComponentProps = {
-  sprites?: SpritesProps
-  name: string
-  loading: boolean
-  [key: string]: boolean | string | SpritesProps | undefined
-}
-
-type SpritesProps = {
+export interface SpritesProps {
   back_female: string | null
   back_shiny_female: string | null
   back_default: string | null
@@ -17,7 +10,7 @@ type SpritesProps = {
   [key: string]: string | null
 }
 
-export type SpriteStateProps = {
+export interface SpriteProps {
   front: boolean
   female: boolean
   shiny: boolean

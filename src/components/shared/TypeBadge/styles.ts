@@ -1,7 +1,7 @@
 import styled from 'styled'
 import { typeColors } from '../../../helpers'
 
-type TypeBadgeProps = {
+interface TypeBadgeProps {
   name: string
 }
 

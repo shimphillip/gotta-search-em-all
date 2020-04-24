@@ -9,7 +9,11 @@ import {
   getLocalStorage,
   setLocalStorage,
 } from '../helpers'
-import { PokemonProps, SpeciesDataProps, ChangePokemonIndex } from './sharedTypes'
+import {
+  PokemonProps,
+  SpeciesDataProps,
+  ChangePokemonIndex,
+} from './shared/types'
 
 const NUMBER_OF_POKEMONS = 807
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import Container from './styles'
 
-type NameProps = {
+interface NameProps {
   name: string
   pokemonIndex: number
 }

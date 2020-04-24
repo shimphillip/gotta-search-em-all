@@ -3,7 +3,7 @@ import Container from './styles'
 import Name from './Name'
 import Sprite from './Sprite'
 import Description from './Description'
-import { PokemonProps } from '../sharedTypes'
+import { PokemonProps } from '../shared/types'
 
 interface LeftPanelprops {
   pokemon?: PokemonProps

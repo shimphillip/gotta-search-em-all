@@ -1,9 +1,9 @@
 import React from 'react'
 import Container from './styles'
 import TypeItem from './TypeItem'
-import { TypeProps } from 'components/sharedTypes'
+import { TypeProps } from 'components/shared/types'
 
-type TypeBoxProps = {
+interface TypeBoxProps {
   types: TypeProps[]
 }
 
