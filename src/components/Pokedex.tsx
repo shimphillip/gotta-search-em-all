@@ -3,30 +3,27 @@ import Container from './PokedexStyles'
 import LeftPanel from './LeftPanel'
 import Divider from './Divider'
 import RightPanel from './RightPanel'
-import {
-  pokemonAPI,
-  pickRandom,
-  getLocalStorage,
-  setLocalStorage,
-} from '../helpers'
+import { pickRandom, local } from '../helpers'
 import {
   PokemonProps,
   SpeciesDataProps,
   ChangePokemonIndex,
 } from './shared/types'
 
+// Settings
 const NUMBER_OF_POKEMONS = 807
+const pokemonAPI = 'https://pokeapi.co/api/v2/'
 
 const Pokedex = () => {
   const [pokemon, setPokemon] = useState<PokemonProps | undefined>(undefined)
   const [pokemonIndex, setPokemonIndex] = useState(
-    getLocalStorage('pokemonIndex')
+    local.getLocalStorage('pokemonIndex')
   )
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     changePokemon(pokemonIndex)
-    setLocalStorage('pokemonIndex', pokemonIndex)
+    local.setLocalStorage('pokemonIndex', pokemonIndex)
   }, [pokemonIndex])
 
   async function changePokemon(pokemonIndex: number) {
