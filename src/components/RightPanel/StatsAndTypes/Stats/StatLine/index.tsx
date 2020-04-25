@@ -8,7 +8,7 @@ type StatLineProps = {
 }
 
 const StatLine = ({ name, baseStat }: StatLineProps) => {
-  return <Container>{padTexts(name, baseStat, '.', 23)}</Container>
+  return <Container>{padTexts(name, baseStat, '.', 22)}</Container>
 }
 
 export default StatLine

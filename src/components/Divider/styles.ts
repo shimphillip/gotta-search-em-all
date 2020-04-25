@@ -11,7 +11,7 @@ const Container = styled.div`
     position: relative;
     height: 100%;
     width: 5px;
-    border: 0.5px solid #460f0f;
+    border: 0.5px solid #87241c;
 
     &::before,
     &::after {
@@ -20,7 +20,7 @@ const Container = styled.div`
       height: 11px;
       width: 16px;
       transform: rotate(180deg);
-      border: 1px groove #460f0f;
+      border: 1px groove #87241c;
       border-radius: 10px;
     }
 
