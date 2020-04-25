@@ -1,6 +1,6 @@
 import React from 'react'
 import Container from './styles'
-import TypeBox from './TypeBox'
+import TypeItem from './TypeItem'
 import { TypeProps } from 'components/shared/types'
 
 interface TypesProps {
@@ -10,8 +10,9 @@ interface TypesProps {
 const Types = ({ types }: TypesProps) => {
   return (
     <Container>
-      <div className="type-header">Types</div>
-      <TypeBox types={types} />
+      {types.map(({ type: { name } }) => {
+        return <TypeItem name={name} key={name} />
+      })}
     </Container>
   )
 }
