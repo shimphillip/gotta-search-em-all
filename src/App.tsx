@@ -33,6 +33,7 @@ const App = () => (
         styles={css`
           @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
           @import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+          @import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
           * {
             box-sizing: inherit;
             margin: 0;
@@ -49,6 +50,7 @@ const App = () => (
             height: 100vh;
             background-image: url(${pikachu});
             background-position: bottom left;
+            background-size: cover;
           }
         `}
       />
