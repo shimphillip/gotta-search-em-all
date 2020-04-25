@@ -1,7 +1,5 @@
 import styled from 'styled'
 
-// #460f0f
-
 const Container = styled.div`
   display: flex;
   width: 100px;

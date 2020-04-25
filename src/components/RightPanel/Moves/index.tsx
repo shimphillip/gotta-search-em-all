@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import { MoveInfoProps } from '../../shared/types'
 import { MovesProps, EntryProps } from './types'
+import { pickRandomIndex } from '../../../helpers'
 
 // todo dynamically randomize moveIndex based on the length of the array
 
@@ -15,7 +16,7 @@ interface MovesComponentProps {
 }
 
 const Moves = ({ moves }: MovesComponentProps) => {
-  const [moveIndex, setMoveIndex] = useState(0)
+  const [moveIndex, setMoveIndex] = useState(getRandomindex({ moves }))
   const [moveInfo, setMoveInfo] = useState<MoveInfoProps | undefined>(undefined)
   const [loading, setLoading] = useState(true)
 
@@ -24,6 +25,13 @@ const Moves = ({ moves }: MovesComponentProps) => {
       fetchMove(moves)
     }
   }, [moveIndex, moves])
+
+  function getRandomindex({ moves }: MovesComponentProps): number {
+    if (!moves || !moves.length) {
+      return 0
+    }
+    return pickRandomIndex(moves)
+  }
 
   async function fetchMove(moves: MovesProps[]) {
     if (!moves.length) {
