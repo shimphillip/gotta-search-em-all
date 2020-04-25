@@ -14,19 +14,20 @@ const theme = {
       flex-direction: column;
     `,
   screen: `
-      background: linear-gradient(14deg, rgb(165, 205, 83) 60%, rgb(193, 217, 144) 65%);
+      background: #a5cd53;
       padding: 20px;
       border-radius: 50px;
       font-family: "VT323";
-      border: inset #879a65 3px;
+      border: #879a65 2px;
     `,
   spriteScreen: `
       width: 100%;
       display: flex;
       image-rendering: pixelated;
-      border: inset #9aa28b 3px;
+      border: #9aa28b 2px;
       border-radius: 50%;
       margin: 10px 0;
+      // background: #cad5b5
       background: linear-gradient(15deg, #cad5b5 64%, #dde2d4 70%, #dde2d4 81%, #fff 86%, #dde2d4 89%, #dde2d4 100%);
     `,
   spriteControl: `

@@ -5,7 +5,6 @@ const Container = styled.div`
   background: ${({ theme }) => theme.colors.pokedexColor};
   padding: 5px 0;
   border-radius: 50px;
-  box-shadow: 10px 10px 10px #a72d23, -10px -10px 10px #f54133;
 
   .inner-container {
     position: relative;
