@@ -1,9 +1,13 @@
 import React from 'react'
 import Container from './styles'
 
-const Loading = () => {
+interface LoadingProps {
+  noBackground?: boolean
+}
+
+const Loading = ({ noBackground }: LoadingProps) => {
   return (
-    <Container>
+    <Container noBackground={noBackground}>
       <div className="pokeball">
         <div className="glow"></div>
         <div className="lower-half"></div>

@@ -3,8 +3,8 @@ import styled from 'styled'
 const Button = styled.button`
   height: 35px;
   width: 35px;
-  border: groove grey 3px;
-  border-radius: 20px;
+  border: groove black 2px;
+  border-radius: 50%;
   cursor: pointer;
   display: flex;
   justify-content: center;

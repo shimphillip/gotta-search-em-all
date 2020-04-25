@@ -1,8 +1,13 @@
 import styled from 'styled'
 
+interface LoadingProps {
+  noBackground?: boolean
+}
+
 // credit goes to https://codepen.io/animeshk874/pen/WGpAkj
-const Container = styled.div`
+const Container = styled.div<LoadingProps>`
   ${({ theme }) => theme.spriteScreen}
+  background: ${({ noBackground }) => noBackground && 'none'};
   position: relative;
   display: inline-block;
   height: 343px;

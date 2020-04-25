@@ -11,28 +11,27 @@ const Container = styled.div`
     position: relative;
     height: 100%;
     width: 5px;
-    border: 1px solid #460f0f;
+    border: 0.5px solid #460f0f;
 
-    &::before {
-      position: absolute;
-      content: '';
-      height: 10px;
-      width: 16px;
-      left: -7px;
-      top: -13px;
-      transform: rotate(180deg);
-      border: 1px groove #460f0f;
-    }
-
+    &::before,
     &::after {
       position: absolute;
       content: '';
-      height: 10px;
+      height: 11px;
       width: 16px;
-      right: -7px;
-      bottom: -13px;
       transform: rotate(180deg);
       border: 1px groove #460f0f;
+      border-radius: 10px;
+    }
+
+    &::before {
+      left: -7px;
+      top: -13px;
+    }
+
+    &::after {
+      right: -7px;
+      bottom: -13px;
     }
   }
 `

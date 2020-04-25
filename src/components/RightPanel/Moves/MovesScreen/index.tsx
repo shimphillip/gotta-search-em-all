@@ -14,7 +14,7 @@ const MovesScreen = ({ moveInfo, loading }: MovesScreen) => {
   if (loading || !moveInfo) {
     return (
       <Container>
-        <Loading />
+        <Loading noBackground />
       </Container>
     )
   }
