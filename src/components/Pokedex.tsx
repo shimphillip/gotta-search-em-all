@@ -3,7 +3,7 @@ import Container from './PokedexStyles'
 import LeftPanel from './LeftPanel'
 import Divider from './Divider'
 import RightPanel from './RightPanel'
-import usePokemon from '../hooks/usePokemon'
+import { usePokemon } from '../hooks'
 
 const Pokedex = () => {
   const { pokemon, pokemonIndex, loading, changePokemonIndex } = usePokemon()

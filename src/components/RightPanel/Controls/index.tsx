@@ -10,10 +10,35 @@ interface ControlsProps {
   changePokemonIndex: ChangePokemonIndex
 }
 
+const NUMBER_OF_POKEMONS = 807
+
 const Controls = ({ pokemonIndex, changePokemonIndex }: ControlsProps) => {
   const [index, setIndex] = useState(pokemonIndex)
+  const [error, setError] = useState(false)
 
-  const indexChangeHandler = (newIndex: string) => {
+  const checkError = (index: number): boolean => {
+    if (index < 1 || index > NUMBER_OF_POKEMONS) {
+      setError(true)
+      setTimeout(() => {
+        setError(false)
+      }, 500)
+
+      return true
+    }
+    return false
+  }
+
+  const handleButton = (newIndex: number) => {
+    const isError = checkError(newIndex)
+    if (isError) {
+      return
+    }
+
+    setIndex(newIndex)
+    changePokemonIndex(newIndex)
+  }
+
+  const handleInputChange = (newIndex: string) => {
     const numberIndex = Number(newIndex)
     setIndex(numberIndex)
   }
@@ -22,13 +47,17 @@ const Controls = ({ pokemonIndex, changePokemonIndex }: ControlsProps) => {
     const code = e.keyCode || e.which
 
     if (code === 13) {
+      const isError = checkError(index)
+      if (isError) {
+        return
+      }
       changePokemonIndex(index)
     }
   }
 
   return (
-    <Container>
-      <Button onClick={() => changePokemonIndex(pokemonIndex - 1)}>
+    <Container error={error}>
+      <Button onClick={() => handleButton(pokemonIndex - 1)}>
         <FontAwesomeIcon icon={faArrowDown} />
       </Button>
       <span>
@@ -37,11 +66,11 @@ const Controls = ({ pokemonIndex, changePokemonIndex }: ControlsProps) => {
           type="text"
           className="input"
           value={index}
-          onChange={(e) => indexChangeHandler(e.target.value)}
+          onChange={(e) => handleInputChange(e.target.value)}
           onKeyPress={(e) => handleKeyPress(e)}
         />
       </span>
-      <Button onClick={() => changePokemonIndex(pokemonIndex + 1)}>
+      <Button onClick={() => handleButton(pokemonIndex + 1)}>
         <FontAwesomeIcon icon={faArrowUp} />
       </Button>
     </Container>
