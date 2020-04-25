@@ -5,11 +5,10 @@ const Divider = () => {
   return (
     <Container>
       <div className="gap"></div>
-      <div className="hinge"></div>
       <div className="gap"></div>
-      <div className="hinge"></div>
       <div className="gap"></div>
-      <div className="hinge"></div>
+      <div className="gap"></div>
+      <div className="gap"></div>
       <div className="gap"></div>
     </Container>
   )

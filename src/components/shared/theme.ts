@@ -18,7 +18,7 @@ const theme = {
       padding: 20px;
       border-radius: 50px;
       font-family: "VT323";
-      border: #879a65 2px;
+      border: 3px solid #879a65;
     `,
   spriteScreen: `
       width: 100%;
