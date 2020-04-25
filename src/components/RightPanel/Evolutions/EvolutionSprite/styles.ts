@@ -1,7 +1,10 @@
 import styled from 'styled'
 
 const Container = styled.div`
+  padding-right: 7px;
+
   .center {
+    margin-top: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,18 +21,17 @@ const Container = styled.div`
 
   .sprite-small {
     ${({ theme }) => theme.spriteScreen}
-
     height: 120px;
     width: 120px;
-    margin: 3px 0;
+    margin: 7px 0;
   }
 
   .name {
     ${({ theme }) => theme.screen}
 
     width: auto;
-    padding: 3px;
-    margin-bottom: 3px;
+    padding: 3px 8px;
+    margin-bottom: 7px;
     text-align: right;
   }
 `

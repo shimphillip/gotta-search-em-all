@@ -34,10 +34,11 @@ const Container = styled.div`
 
   .move-description {
     ${({ theme }) => theme.spriteScreen}
+    border-radius: 50px;
     display: block;
     height: 100%;
     margin: 10px 3px 5px;
-    padding: 5px 10px;
+    padding: 10px 20px;
     overflow-y: scroll;
 
     hr {

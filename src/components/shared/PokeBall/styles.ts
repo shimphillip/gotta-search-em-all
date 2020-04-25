@@ -3,11 +3,11 @@ import { PokeBallProps } from './'
 
 const Container = styled.div<PokeBallProps>`
   ${({ theme }) => theme.spriteScreen}
-  background: linear-gradient(15deg, #83887b 64%, #8b8f81 70%, #8b8f81 81%, #babfb1 86%, #8b8f81 89%, #8b8f81 100%);
+  background: #83887b;
   position: relative;
   height: ${(props) => (props.nameClass === 'bigScreen' ? '343px' : '120px')};
   width: ${(props) => (props.nameClass === 'bigScreen' ? '100%' : '120px')};
-  margin: ${(props) => (props.nameClass === 'bigScreen' ? '10px 0' : '3px 0')};
+  margin: ${(props) => (props.nameClass === 'bigScreen' ? '10px 0' : '7px 0')};
 
   /* Thank you https://nostalgic-css.github.io/NES.css/ */
   &::before {

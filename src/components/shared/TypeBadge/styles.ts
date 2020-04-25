@@ -11,7 +11,7 @@ const TypeBadge = styled.div<TypeBadgeProps>`
   font-size: 1.25em;
   padding: 2px;
   margin: 2px;
-  border: groove #757575 3px;
+  border: groove black 3px;
   border-radius: 20px;
   width: 150px;
   font-family: 'Staatliches', cursive;

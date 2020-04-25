@@ -8,7 +8,7 @@ const theme = {
     `,
   lightBorders: `
       padding: 10px;
-      border: inset #b31818 2px;
+      border: 2px solid #b31818;
       border-radius: 50px;
       display: flex;
       flex-direction: column;
@@ -27,8 +27,7 @@ const theme = {
       border: #9aa28b 2px;
       border-radius: 50%;
       margin: 10px 0;
-      // background: #cad5b5
-      background: linear-gradient(15deg, #cad5b5 64%, #dde2d4 70%, #dde2d4 81%, #fff 86%, #dde2d4 89%, #dde2d4 100%);
+      background: #cad5b5;
     `,
   spriteControl: `
       height: 35px;

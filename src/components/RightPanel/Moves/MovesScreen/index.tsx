@@ -57,9 +57,7 @@ const MovesScreen = ({ moveInfo, loading }: MovesScreen) => {
         </div>
       </div>
       <div className="move-description">
-        <p>
-          <strong>Description:</strong> {moveDescription}
-        </p>
+        <p>{moveDescription}</p>
         <hr />
         <p>
           <strong>Effect:</strong> {effectDescription}

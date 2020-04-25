@@ -11,12 +11,13 @@ const Container = styled.div`
     height: 30px;
 
     .input {
+      ${({ theme }) => theme.screen}
+      padding: 5px 10px;
       width: 50px;
       font-size: 20px;
       text-align: right;
       align-self: center;
-
-      ${({ theme }) => theme.screen}
+      outline: none;
     }
   }
 `
