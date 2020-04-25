@@ -1,9 +1,13 @@
 import styled from 'styled'
 
-const Button = styled.button`
+interface ButtonProps {
+  active?: boolean
+  className?: string
+}
+
+const Button = styled.button<ButtonProps>`
   height: 35px;
   width: 35px;
-  border: groove black 2px;
   border-radius: 50%;
   cursor: pointer;
   display: flex;
@@ -11,7 +15,7 @@ const Button = styled.button`
   align-items: center;
   color: black;
   padding: 1px;
-  border-color: #b06868;
+  border: groove ${({ active }) => (active ? '#b8ed7c' : '#b06868')} 2px;
   font-size: 15px;
   outline: none;
   background-color: inherit;
@@ -21,8 +25,8 @@ const Button = styled.button`
   }
 
   ${({ className }) =>
-    className === 'shiny'
-      ? `
+    className === 'shiny' &&
+    `
         font-family: 'Staatliches',cursive;
         transform: rotate(0);
         background: linear-gradient(
@@ -34,11 +38,11 @@ const Button = styled.button`
           #fff6c8 74%,
           #ffee90 80%
         );
-        border-color: #cdb589;
+        background: #ffee90;
+        // border: none;
         width: 90px;
         text-shadow: white -1px 1px;
-  `
-      : null}
+  `}
 `
 
 export default Button

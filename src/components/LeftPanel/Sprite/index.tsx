@@ -10,7 +10,7 @@ interface SpriteComponentProps {
   sprites?: SpritesProps
   name: string
   loading: boolean
-  [key: string]: boolean | string | SpritesProps | undefined
+  [key: string]: any
 }
 
 const Sprite = ({ sprites, name, loading }: SpriteComponentProps) => {
@@ -71,13 +71,17 @@ const Sprite = ({ sprites, name, loading }: SpriteComponentProps) => {
     <Container error={error}>
       {renderScreen()}
       <div className="controls">
-        <Button onClick={() => handleChange('female')}>
+        <Button active={sprite.female} onClick={() => handleChange('female')}>
           <FontAwesomeIcon icon={faVenus} />
         </Button>
-        <Button className="shiny" onClick={() => handleChange('shiny')}>
+        <Button
+          active={sprite.shiny}
+          className="shiny"
+          onClick={() => handleChange('shiny')}
+        >
           Shiny
         </Button>
-        <Button onClick={() => handleChange('front')}>
+        <Button active={!sprite.front} onClick={() => handleChange('front')}>
           <FontAwesomeIcon icon={faUndo} />
         </Button>
       </div>

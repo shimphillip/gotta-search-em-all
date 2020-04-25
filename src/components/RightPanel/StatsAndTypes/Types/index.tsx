@@ -10,6 +10,7 @@ interface TypesProps {
   height: number
 }
 
+// Todo: better name for the component now it has biostats
 const Types = ({ types, weight, height }: TypesProps) => {
   return (
     <Container>

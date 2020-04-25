@@ -11,7 +11,6 @@ const TypeBadge = styled.div<TypeBadgeProps>`
   font-size: 1.25em;
   padding: 2px;
   margin: 2px;
-  border: groove black 3px;
   border-radius: 20px;
   width: 150px;
   font-family: 'Staatliches', cursive;
@@ -20,6 +19,7 @@ const TypeBadge = styled.div<TypeBadgeProps>`
   text-shadow: rgba(255, 255, 255, 0.3) -1px 1px;
   align-self: center;
   background-color: ${({ name }) => typeColors[name]};
+  border: groove ${({ name }) => typeColors[name]} 3px;
 `
 
 export default TypeBadge
