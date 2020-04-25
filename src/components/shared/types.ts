@@ -15,6 +15,8 @@ export interface PokemonProps {
     types: TypeProps[]
     stats: Stat[]
     moves: MovesProps[]
+    weight: number
+    height: number
   }
   pokemonDescription: string
   speciesData: SpeciesDataProps

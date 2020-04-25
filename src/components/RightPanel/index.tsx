@@ -22,14 +22,19 @@ const RightPanel = ({
   }
 
   const {
-    pokemonData: { types, stats, moves },
+    pokemonData: { types, stats, moves, weight, height },
     evolutionSprites,
     evolutionNames,
   } = pokemon
 
   return (
     <Container>
-      <StatsAndTypes stats={stats} types={types} />
+      <StatsAndTypes
+        stats={stats}
+        types={types}
+        weight={weight}
+        height={height}
+      />
       <Evolutions
         evolutionSprites={evolutionSprites}
         evolutionNames={evolutionNames}
