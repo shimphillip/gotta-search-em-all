@@ -20,7 +20,7 @@ const Container = styled.div`
       height: 11px;
       width: 16px;
       transform: rotate(180deg);
-      border: 1px groove #87241c;
+      border: 1px groove #9b2920;
       border-radius: 10px;
     }
 

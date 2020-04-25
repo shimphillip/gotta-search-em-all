@@ -8,9 +8,10 @@ interface LoadingProps {
 const Container = styled.div<LoadingProps>`
   ${({ theme }) => theme.spriteScreen}
   background: ${({ noBackground }) => noBackground && 'none'};
+  border: ${({ noBackground }) => noBackground && 'none'};
   position: relative;
   display: inline-block;
-  height: 343px;
+  height: 314px;
 
   .pokeball {
     display: inline-block;
