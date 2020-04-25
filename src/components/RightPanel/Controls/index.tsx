@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, KeyboardEvent } from 'react'
 import Container from './styles'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowUp, faArrowDown } from '@fortawesome/free-solid-svg-icons'
@@ -11,6 +11,21 @@ interface ControlsProps {
 }
 
 const Controls = ({ pokemonIndex, changePokemonIndex }: ControlsProps) => {
+  const [index, setIndex] = useState(pokemonIndex)
+
+  const indexChangeHandler = (newIndex: string) => {
+    const numberIndex = Number(newIndex)
+    setIndex(numberIndex)
+  }
+
+  const handleKeyPress = (e: KeyboardEvent<HTMLInputElement>) => {
+    const code = e.keyCode || e.which
+
+    if (code === 13) {
+      changePokemonIndex(index)
+    }
+  }
+
   return (
     <Container>
       <Button onClick={() => changePokemonIndex(pokemonIndex - 1)}>
@@ -21,8 +36,9 @@ const Controls = ({ pokemonIndex, changePokemonIndex }: ControlsProps) => {
         <input
           type="text"
           className="input"
-          value={pokemonIndex}
-          onChange={(e) => changePokemonIndex(Number(e.target.value))}
+          value={index}
+          onChange={(e) => indexChangeHandler(e.target.value)}
+          onKeyPress={(e) => handleKeyPress(e)}
         />
       </span>
       <Button onClick={() => changePokemonIndex(pokemonIndex + 1)}>

@@ -13,7 +13,7 @@ const pokemonAPI = 'https://pokeapi.co/api/v2/'
 const usePokemon = () => {
   const [pokemon, setPokemon] = useState<PokemonProps | undefined>(undefined)
   const [pokemonIndex, setPokemonIndex] = useState(
-    local.getLocalStorage('pokemonIndex')
+    local.getLocalStorage('pokemonIndex') || 25
   )
   const [loading, setLoading] = useState(true)
 
@@ -93,7 +93,7 @@ const usePokemon = () => {
     }
   }
   const changePokemonIndex: ChangePokemonIndex = (newIndex) => {
-    if (newIndex < 0 || newIndex > NUMBER_OF_POKEMONS) {
+    if (newIndex < 1 || newIndex > NUMBER_OF_POKEMONS) {
       return
     }
 
