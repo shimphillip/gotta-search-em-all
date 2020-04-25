@@ -28,6 +28,7 @@ const theme = {
       border-radius: 50%;
       margin: 10px 0;
       background: #cad5b5;
+      border: 3px solid #acb59a;
     `,
   spriteControl: `
       height: 35px;
