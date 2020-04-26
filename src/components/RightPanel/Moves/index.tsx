@@ -1,43 +1,37 @@
 import React, { useState, useEffect } from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faRandom } from '@fortawesome/free-solid-svg-icons'
 import Container from './styles'
 import MovesScreen from './MovesScreen'
 import { pickRandom } from '../../../helpers'
 import { Button } from '../../shared'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import { MoveInfoProps } from '../../shared/types'
 import { MovesProps, EntryProps } from './types'
 import { pickRandomIndex } from '../../../helpers'
-
-// todo dynamically randomize moveIndex based on the length of the array
 
 interface MovesComponentProps {
   moves?: MovesProps[]
 }
 
 const Moves = ({ moves }: MovesComponentProps) => {
-  const [moveIndex, setMoveIndex] = useState(getRandomindex({ moves }))
   const [moveInfo, setMoveInfo] = useState<MoveInfoProps | undefined>(undefined)
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    if (moves) {
-      fetchMove(moves)
-    }
-  }, [moveIndex, moves])
+    fetchMove(moves)
+  }, [moves])
 
-  function getRandomindex({ moves }: MovesComponentProps): number {
+  async function fetchMove(moves: MovesProps[] | undefined) {
     if (!moves || !moves.length) {
-      return 0
-    }
-    return pickRandomIndex(moves)
-  }
-
-  async function fetchMove(moves: MovesProps[]) {
-    if (!moves.length) {
       return
     }
     setLoading(true)
+
+    const moveIndex = pickRandomIndex(moves)
+
+    console.log('moves', moves)
+    console.log('move index', moveIndex)
+    console.log('moveslength', moves.length)
 
     const { name } = moves[moveIndex].move
     const { url } = moves[moveIndex].move
@@ -81,36 +75,11 @@ const Moves = ({ moves }: MovesComponentProps) => {
     })
   }
 
-  const handleNegativeIndex = (): void => {
-    if (!moves) {
-      return
-    }
-
-    if (!moves[moveIndex - 1]) {
-      return setMoveIndex(moves.length - 1)
-    }
-    setMoveIndex(moveIndex - 1)
-  }
-
-  const handlePositiveIndex = (): void => {
-    if (!moves) {
-      return
-    }
-
-    if (!moves[moveIndex + 1]) {
-      return setMoveIndex(0)
-    }
-    setMoveIndex(moveIndex + 1)
-  }
-
   return (
     <Container>
-      <Button onClick={handleNegativeIndex}>
-        <FontAwesomeIcon icon={faArrowLeft} />
-      </Button>
       <MovesScreen moveInfo={moveInfo} loading={loading} />
-      <Button onClick={handlePositiveIndex}>
-        <FontAwesomeIcon icon={faArrowRight} />
+      <Button onClick={() => fetchMove(moves)}>
+        <FontAwesomeIcon icon={faRandom} />
       </Button>
     </Container>
   )

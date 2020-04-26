@@ -28,6 +28,10 @@ const Container = styled.div`
       text-transform: capitalize;
     }
 
+    .move-left {
+      padding-right: 10px;
+    }
+
     .move-right {
     }
   }
