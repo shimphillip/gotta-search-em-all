@@ -67,6 +67,8 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 4. https://github.com/klaussinani/hyper-pokemon Background wallpaper
 
+5. https://pokeapi.co/ PokeAPI
+
 ## Todos
 
 - [ ] Instead of getting random moves, sort the moves by levels, machine and tutor. Then create next and previous buttons to visit surrounding moves.
