@@ -1,11 +1,10 @@
-import React, { Suspense } from 'react'
+import React from 'react'
 import styled from 'styled'
 import { Global, css } from '@emotion/core'
 import { ThemeProvider } from 'emotion-theming'
 import Pokedex from './components/Pokedex'
 import { theme } from './components/shared'
 import pikachu from './assets/pikachu.png'
-import { Loading } from './components/shared'
 
 const AppContainer = styled.div`
   position: absolute;
@@ -34,7 +33,6 @@ const App = () => (
         styles={css`
           @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
           @import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
-          @import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
           * {
             box-sizing: inherit;
             margin: 0;
@@ -58,9 +56,7 @@ const App = () => (
       <h1>
         Gotta <span className="red">search'em</span> all
       </h1>
-      <Suspense fallback={<Loading />}>
-        <Pokedex />
-      </Suspense>
+      <Pokedex />
     </AppContainer>
   </ThemeProvider>
 )

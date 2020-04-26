@@ -96,10 +96,8 @@ const usePokemon = () => {
     if (newIndex < 1 || newIndex > NUMBER_OF_POKEMONS) {
       return
     }
-
     return setPokemonIndex(newIndex)
   }
-
   return { pokemon, pokemonIndex, loading, changePokemonIndex }
 }
 
