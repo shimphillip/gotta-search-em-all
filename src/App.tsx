@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import styled from 'styled'
 import { Global, css } from '@emotion/core'
 import { ThemeProvider } from 'emotion-theming'
 import Pokedex from './components/Pokedex'
 import { theme } from './components/shared'
 import pikachu from './assets/pikachu.png'
+import { Loading } from './components/shared'
 
 const AppContainer = styled.div`
   position: absolute;
@@ -57,7 +58,9 @@ const App = () => (
       <h1>
         Gotta <span className="red">search'em</span> all
       </h1>
-      <Pokedex />
+      <Suspense fallback={<Loading />}>
+        <Pokedex />
+      </Suspense>
     </AppContainer>
   </ThemeProvider>
 )

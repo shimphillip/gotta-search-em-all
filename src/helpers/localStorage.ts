@@ -1,4 +1,4 @@
-const getLocalStorage = (key: string) => {
+const getLocalStorage = (key: string): number => {
   if (!localStorage.getItem(key)) {
     return 25
   }

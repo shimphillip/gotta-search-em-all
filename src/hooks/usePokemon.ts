@@ -13,7 +13,7 @@ const pokemonAPI = 'https://pokeapi.co/api/v2/'
 const usePokemon = () => {
   const [pokemon, setPokemon] = useState<PokemonProps | undefined>(undefined)
   const [pokemonIndex, setPokemonIndex] = useState(
-    local.getLocalStorage('pokemonIndex') || 25
+    local.getLocalStorage('pokemonIndex')
   )
   const [loading, setLoading] = useState(true)
 
