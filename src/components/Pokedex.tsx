@@ -4,19 +4,19 @@ import LeftPanel from './LeftPanel'
 import Divider from './Divider'
 import RightPanel from './RightPanel'
 import { usePokemon } from '../hooks'
-import WithSplashScreen from './WithSplashScreen'
+import { Loading } from './shared'
 
 const Pokedex = () => {
   const { pokemon, pokemonIndex, loading, changePokemonIndex } = usePokemon()
 
+  if (loading) {
+    return <Loading noBackground />
+  }
+
   return (
     <Container>
       <div className="inner-container">
-        <LeftPanel
-          pokemon={pokemon}
-          loading={loading}
-          pokemonIndex={pokemonIndex}
-        />
+        <LeftPanel pokemon={pokemon} pokemonIndex={pokemonIndex} />
         <Divider />
         <RightPanel
           pokemon={pokemon}
@@ -28,4 +28,4 @@ const Pokedex = () => {
   )
 }
 
-export default WithSplashScreen(Pokedex)
+export default Pokedex

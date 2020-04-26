@@ -3,17 +3,16 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faVenus, faUndo } from '@fortawesome/free-solid-svg-icons'
 import Container from './styles'
 import { Button } from '../../shared'
-import { Loading, PokeBall } from '../../shared'
+import { PokeBall } from '../../shared'
 import { SpritesProps, SpriteProps } from './types'
 
 interface SpriteComponentProps {
   sprites?: SpritesProps
   name: string
-  loading: boolean
   [key: string]: any
 }
 
-const Sprite = ({ sprites, name, loading }: SpriteComponentProps) => {
+const Sprite = ({ sprites, name }: SpriteComponentProps) => {
   const [sprite, setSprite] = useState<SpriteProps>({
     front: true,
     female: false,
@@ -57,9 +56,6 @@ const Sprite = ({ sprites, name, loading }: SpriteComponentProps) => {
   }
 
   const renderScreen = () => {
-    if (loading) {
-      return <Loading />
-    }
     if (src) {
       return <img src={src} alt={name} />
     }
