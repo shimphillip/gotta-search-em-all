@@ -59,7 +59,7 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-1. https://codepen.io/siliconunicorn/pen/VqoxXP - My project is based off of this codepen I saw which I really liked. I added erro handling, animations, loaders and expanded existing features such as redesign of pokemon moves with big refactoring.
+1. https://codepen.io/siliconunicorn/pen/VqoxXP - Huge inspiration from here
 
 2. https://codepen.io/animeshk874/pen/WGpAkj for the pokemon loader animation
 
@@ -76,3 +76,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 - [ ] Add animations when switching to different pokemons, moves, etc...
 - [ ] Change backgrounds option
 - [ ] Better contrast between some type backgrounds and texts
+- [ ] Maybe pikachu cursor?
