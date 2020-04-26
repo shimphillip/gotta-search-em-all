@@ -5,6 +5,7 @@ import { ThemeProvider } from 'emotion-theming'
 import Pokedex from './components/Pokedex'
 import { theme } from './components/shared'
 import pikachu from './assets/pikachu.png'
+import Footer from 'components/Footer'
 
 const AppContainer = styled.div`
   position: absolute;
@@ -17,7 +18,7 @@ const AppContainer = styled.div`
     text-align: center;
     text-transform: capitalize;
     margin-bottom: 10px;
-    font-family: 'Staatliches';
+    font-family: 'Staatliches', sans-serif;
     letter-spacing: 5px;
 
     .red {
@@ -57,6 +58,7 @@ const App = () => (
         Gotta <span className="red">search'em</span> all
       </h1>
       <Pokedex />
+      <Footer />
     </AppContainer>
   </ThemeProvider>
 )
