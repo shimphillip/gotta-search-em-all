@@ -4,6 +4,7 @@ import LeftPanel from './LeftPanel'
 import Divider from './Divider'
 import RightPanel from './RightPanel'
 import { usePokemon } from '../hooks'
+import WithSplashScreen from './WithSplashScreen'
 
 const Pokedex = () => {
   const { pokemon, pokemonIndex, loading, changePokemonIndex } = usePokemon()
@@ -27,4 +28,4 @@ const Pokedex = () => {
   )
 }
 
-export default Pokedex
+export default WithSplashScreen(Pokedex)
