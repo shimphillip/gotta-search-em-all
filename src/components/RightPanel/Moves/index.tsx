@@ -26,12 +26,7 @@ const Moves = ({ moves }: MovesComponentProps) => {
       return
     }
     setLoading(true)
-
     const moveIndex = pickRandomIndex(moves)
-
-    console.log('moves', moves)
-    console.log('move index', moveIndex)
-    console.log('moveslength', moves.length)
 
     const { name } = moves[moveIndex].move
     const { url } = moves[moveIndex].move
