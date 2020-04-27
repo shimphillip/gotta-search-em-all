@@ -4,6 +4,8 @@
 
 ![screenshot](./docs/screenshot.png)
 
+![screenshot](./docs/performance.png)
+
 ## Getting Started
 
 Visit to see the live app https://gotta-search-em-all.netlify.app/
