@@ -57,10 +57,13 @@ const Controls = ({ pokemonIndex, changePokemonIndex }: ControlsProps) => {
 
   return (
     <Container error={error}>
-      <Button onClick={() => handleButton(pokemonIndex - 1)}>
+      <Button
+        onClick={() => handleButton(pokemonIndex - 1)}
+        aria-label="Move down"
+      >
         <FontAwesomeIcon icon={faArrowDown} />
       </Button>
-      <span>
+      <label>
         No:{' '}
         <input
           type="text"
@@ -69,8 +72,11 @@ const Controls = ({ pokemonIndex, changePokemonIndex }: ControlsProps) => {
           onChange={(e) => handleInputChange(e.target.value)}
           onKeyPress={(e) => handleKeyPress(e)}
         />
-      </span>
-      <Button onClick={() => handleButton(pokemonIndex + 1)}>
+      </label>
+      <Button
+        onClick={() => handleButton(pokemonIndex + 1)}
+        aria-label="Move up"
+      >
         <FontAwesomeIcon icon={faArrowUp} />
       </Button>
     </Container>

@@ -29,7 +29,7 @@ const Container = styled.div<ContainerProps>`
   justify-content: space-evenly;
   margin: 8px 0;
 
-  span {
+  label {
     font-size: 20px;
     height: 30px;
 

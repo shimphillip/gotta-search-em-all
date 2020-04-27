@@ -68,14 +68,3 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 4. https://github.com/klaussinani/hyper-pokemon Background wallpaper
 
 5. https://pokeapi.co/ PokeAPI
-
-## Todos
-
-- [ ] Instead of getting random moves, sort the moves by levels, machine and tutor. Then create next and previous buttons to visit surrounding moves.
-- [ ] Give settings button/option then only allow pokemons by game generations
-- [ ] Write tests
-- [ ] Create a docker container
-- [ ] Add animations when switching to different pokemons, moves, etc...
-- [ ] Change backgrounds option
-- [ ] Better contrast between some type backgrounds and texts
-- [ ] Maybe pikachu cursor?

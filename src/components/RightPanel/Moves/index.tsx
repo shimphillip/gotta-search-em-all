@@ -73,7 +73,7 @@ const Moves = ({ moves }: MovesComponentProps) => {
   return (
     <Container>
       <MovesScreen moveInfo={moveInfo} loading={loading} />
-      <Button onClick={() => fetchMove(moves)}>
+      <Button onClick={() => fetchMove(moves)} aria-label="Get Random">
         <FontAwesomeIcon icon={faRandom} />
       </Button>
     </Container>

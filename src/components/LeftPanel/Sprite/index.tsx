@@ -67,17 +67,26 @@ const Sprite = ({ sprites, name }: SpriteComponentProps) => {
     <Container error={error}>
       {renderScreen()}
       <div className="controls">
-        <Button active={sprite.female} onClick={() => handleChange('female')}>
+        <Button
+          active={sprite.female}
+          onClick={() => handleChange('female')}
+          aria-label="Change Gender"
+        >
           <FontAwesomeIcon icon={faVenus} />
         </Button>
         <Button
           active={sprite.shiny}
           className="shiny"
           onClick={() => handleChange('shiny')}
+          aria-label="Change to Shiny"
         >
           Shiny
         </Button>
-        <Button active={!sprite.front} onClick={() => handleChange('front')}>
+        <Button
+          active={!sprite.front}
+          onClick={() => handleChange('front')}
+          aria-label="Change front"
+        >
           <FontAwesomeIcon icon={faUndo} />
         </Button>
       </div>
