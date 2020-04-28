@@ -36,6 +36,18 @@ const Container = styled.div`
     }
   }
 
+  .outer {
+    overflow: hidden;
+    .inner {
+      height: 40px;
+      overflow-y: hidden;
+
+      &:hover {
+        overflow-y: scroll;
+      }
+    }
+  }
+
   .move-description {
     ${({ theme }) => theme.spriteScreen}
     border-radius: 50px;
@@ -43,7 +55,7 @@ const Container = styled.div`
     height: 100%;
     margin: 10px 3px 5px;
     padding: 10px 20px;
-    overflow-y: scroll;
+    // overflow-y: scroll;
 
     hr {
       margin: 5px 0;
