@@ -1,35 +1,15 @@
 import React from 'react'
-import styled from 'styled'
 import { Global, css } from '@emotion/core'
 import { ThemeProvider } from 'emotion-theming'
+import Container from './AppStyles'
 import Pokedex from './components/Pokedex'
 import { theme } from './components/shared'
 import pikachu from './assets/pikachu.png'
 import Footer from 'components/Footer'
 
-const AppContainer = styled.div`
-  position: absolute;
-  top: 55%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
-  h1 {
-    font-size: 4rem;
-    text-align: center;
-    text-transform: capitalize;
-    margin-bottom: 10px;
-    font-family: 'Staatliches', sans-serif;
-    letter-spacing: 5px;
-
-    .red {
-      color: #df1c18;
-    }
-  }
-`
-
 const App = () => (
   <ThemeProvider theme={theme}>
-    <AppContainer>
+    <Container>
       <Global
         styles={css`
           @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
@@ -78,7 +58,7 @@ const App = () => (
       </h1>
       <Pokedex />
       <Footer />
-    </AppContainer>
+    </Container>
   </ThemeProvider>
 )
 
