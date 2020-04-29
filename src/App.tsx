@@ -9,7 +9,7 @@ import Footer from 'components/Footer'
 
 const AppContainer = styled.div`
   position: absolute;
-  top: 50%;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
 
@@ -51,6 +51,25 @@ const App = () => (
             background-image: url(${pikachu});
             background-position: bottom left;
             background-size: cover;
+          }
+          /* width */
+          ::-webkit-scrollbar {
+            width: 10px;
+          }
+
+          /* Track */
+          ::-webkit-scrollbar-track {
+            background: #cad5b5;
+          }
+
+          /* Handle */
+          ::-webkit-scrollbar-thumb {
+            background: #888;
+          }
+
+          /* Handle on hover */
+          ::-webkit-scrollbar-thumb:hover {
+            background: #555;
           }
         `}
       />

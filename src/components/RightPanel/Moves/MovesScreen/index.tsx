@@ -56,12 +56,14 @@ const MovesScreen = ({ moveInfo, loading }: MovesScreen) => {
           <p>{padTexts('Method:', learnMethod, '.', 20)}</p>
         </div>
       </div>
-      <div className="move-description">
-        <p>{moveDescription}</p>
-        <hr />
-        <p>
-          <strong>Effect:</strong> {effectDescription}
-        </p>
+      <div className="move-description outer">
+        <div className="inner">
+          <p>{moveDescription}</p>
+          <hr />
+          <p>
+            <strong>Effect:</strong> {effectDescription}
+          </p>
+        </div>
       </div>
     </Container>
   )
