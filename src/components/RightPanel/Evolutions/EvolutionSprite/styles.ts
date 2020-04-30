@@ -32,7 +32,7 @@ const Container = styled.div`
     width: auto;
     padding: 3px 8px;
     margin-bottom: 7px;
-    text-align: right;
+    text-align: center;
   }
 `
 
