@@ -4,7 +4,7 @@ import { getPokemonNames } from '../helpers'
 // default returns empty string. Later this is used in a ternary operator which will default to Pikachu
 const usePokemonName = (): number => {
   const slug = useLocation().pathname.split('/')[1]
-  const name = useLocation().pathname.split('/')[2].toLowerCase()
+  const name = useLocation().pathname.split('/')[2]
 
   // if missing the path 'pokemon'
   // if missing a name value
@@ -14,7 +14,7 @@ const usePokemonName = (): number => {
   }
 
   // not a valid pokemon name
-  const pokemonNameIndex = getPokemonNames()[name]
+  const pokemonNameIndex = getPokemonNames()[name.toLowerCase()]
   if (!pokemonNameIndex) {
     return 0
   }
