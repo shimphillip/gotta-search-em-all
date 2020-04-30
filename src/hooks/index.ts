@@ -1,3 +1,4 @@
 import usePokemon from './usePokemon'
+import usePokemonIndex from './usePokemonIndex'
 
-export { usePokemon }
+export { usePokemon, usePokemonIndex }

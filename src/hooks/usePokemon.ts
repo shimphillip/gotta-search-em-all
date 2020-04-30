@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react'
-import { pickRandom, local } from '../helpers'
+import { useHistory } from 'react-router-dom'
+import { pickRandom } from '../helpers'
 import {
   PokemonProps,
   SpeciesDataProps,
   ChangePokemonIndex,
 } from '../components/shared/types'
+import { usePokemonIndex } from './index'
 
 // Settings
 const NUMBER_OF_POKEMONS = 807
@@ -12,14 +14,12 @@ const pokemonAPI = 'https://pokeapi.co/api/v2/'
 
 const usePokemon = () => {
   const [pokemon, setPokemon] = useState<PokemonProps | undefined>(undefined)
-  const [pokemonIndex, setPokemonIndex] = useState(
-    local.getLocalStorage('pokemonIndex')
-  )
+  const [pokemonIndex, setPokemonIndex] = useState(usePokemonIndex())
   const [loading, setLoading] = useState(true)
+  let history = useHistory()
 
   useEffect(() => {
     changePokemon(pokemonIndex)
-    local.setLocalStorage('pokemonIndex', pokemonIndex)
   }, [pokemonIndex])
 
   async function changePokemon(pokemonIndex: number) {
@@ -96,6 +96,7 @@ const usePokemon = () => {
     if (newIndex < 1 || newIndex > NUMBER_OF_POKEMONS) {
       return
     }
+    history.push(`/pokemon/${newIndex}`)
     return setPokemonIndex(newIndex)
   }
   return { pokemon, pokemonIndex, loading, changePokemonIndex }
