@@ -6,7 +6,7 @@ import {
   SpeciesDataProps,
   ChangePokemonIndex,
 } from '../components/shared/types'
-import { usePokemonIndex } from './index'
+import { usePokemonIndex, usePokemonName } from './index'
 
 // Settings
 const NUMBER_OF_POKEMONS = 807
@@ -17,8 +17,12 @@ const usePokemon = () => {
   const [pokemonIndex, setPokemonIndex] = useState(usePokemonIndex())
   const [loading, setLoading] = useState(true)
   let history = useHistory()
+  const pokemonNameIndex = usePokemonName()
 
   useEffect(() => {
+    if (pokemonNameIndex) {
+      setPokemonIndex(pokemonNameIndex)
+    }
     changePokemon(pokemonIndex)
   }, [pokemonIndex])
 
@@ -26,7 +30,7 @@ const usePokemon = () => {
     try {
       setLoading(true)
       const pokemonData = await fetch(
-        `${pokemonAPI}pokemon/${pokemonIndex}`
+        `${pokemonAPI}pokemon/${pokemonNameIndex || pokemonIndex}`
       ).then((response) => response.json())
 
       const speciesRequest = pokemonData.species.url
