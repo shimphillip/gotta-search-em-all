@@ -24,6 +24,7 @@ const Container = styled.div`
     height: 120px;
     width: 120px;
     margin: 7px 0;
+    cursor: pointer;
   }
 
   .name {

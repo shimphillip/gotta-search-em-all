@@ -38,6 +38,7 @@ const RightPanel = ({
       <Evolutions
         evolutionSprites={evolutionSprites}
         evolutionNames={evolutionNames}
+        changePokemonIndex={changePokemonIndex}
       />
       <Moves moves={moves} />
       <Controls
