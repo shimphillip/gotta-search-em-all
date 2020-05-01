@@ -40,11 +40,7 @@ const Container = styled.div`
     overflow: hidden;
     .inner {
       height: 40px;
-      overflow-y: hidden;
-
-      &:hover {
-        overflow-y: scroll;
-      }
+      overflow-y: scroll;
     }
   }
 
@@ -55,7 +51,6 @@ const Container = styled.div`
     height: 100%;
     margin: 10px 3px 5px;
     padding: 10px 20px;
-    // overflow-y: scroll;
 
     hr {
       margin: 5px 0;
