@@ -17,14 +17,14 @@ const LeftPanel = ({ pokemon, pokemonIndex }: LeftPanelprops) => {
 
   const {
     pokemonData: { name, sprites },
-    pokemonDescription,
+    pokemonDescriptions,
   } = pokemon
 
   return (
     <Container>
       <Name name={name} pokemonIndex={pokemonIndex} />
       <Sprite sprites={sprites} name={name} />
-      <Description description={pokemonDescription} />
+      <Description descriptions={pokemonDescriptions} />
     </Container>
   )
 }

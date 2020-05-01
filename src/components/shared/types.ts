@@ -18,7 +18,7 @@ export interface PokemonProps {
     weight: number
     height: number
   }
-  pokemonDescription: string
+  pokemonDescriptions: string[]
   speciesData: SpeciesDataProps
   evolutionSprites: string[]
   evolutionNames: string[]

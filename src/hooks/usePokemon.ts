@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react'
 import { useHistory } from 'react-router-dom'
-import { pickRandom } from '../helpers'
 import {
   PokemonProps,
   SpeciesDataProps,
   ChangePokemonIndex,
 } from '../components/shared/types'
 import { usePokemonIndex, usePokemonName } from './index'
+import { getUniqueItems } from '../helpers'
 
 // Settings
 const NUMBER_OF_POKEMONS = 807
@@ -43,7 +43,7 @@ const usePokemon = () => {
         .filter((entry) => entry.language.name === 'en')
         .map((entry) => entry.flavor_text)
 
-      const description = pickRandom(flavorTexts)
+      const descriptions = getUniqueItems(flavorTexts)
       const evolutionRequest = speciesData.evolution_chain.url
 
       const evolutionData = await fetch(evolutionRequest).then((response) =>
@@ -85,7 +85,7 @@ const usePokemon = () => {
               ...pokemon,
               pokemonData,
               speciesData,
-              pokemonDescription: description,
+              pokemonDescriptions: descriptions,
               evolutionSprites: sprites,
               evolutionNames: names,
             })
