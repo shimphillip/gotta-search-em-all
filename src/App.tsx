@@ -7,6 +7,7 @@ import Container from './AppStyles'
 import Pokedex from './components/Pokedex'
 import { theme } from './components/shared'
 import Footer from 'components/Footer'
+import pikachu from './assets/pikachu.png'
 
 const App = () => {
   return (
@@ -30,7 +31,7 @@ const App = () => {
             body {
               font-family: 'VT323', monospace;
               height: 100vh;
-              background-image: url(/backgrounds/pikachu.png);
+              background-image: url(${pikachu});
               transition: background-image 2s ease-in;
               background-position: bottom left;
               background-size: cover;
