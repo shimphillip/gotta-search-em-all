@@ -31,6 +31,7 @@ const App = () => {
               font-family: 'VT323', monospace;
               height: 100vh;
               background-image: url(/backgrounds/pikachu.png);
+              transition: background-image 2s ease-in;
               background-position: bottom left;
               background-size: cover;
               cursor: url(/pokecursors/pikachu.gif), auto;
