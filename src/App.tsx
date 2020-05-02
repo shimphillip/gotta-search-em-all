@@ -33,6 +33,7 @@ const App = () => {
               background-image: url(/backgrounds/pikachu.png);
               background-position: bottom left;
               background-size: cover;
+              cursor: url(/pokecursors/pikachu.gif), auto;
             }
             /* width */
             ::-webkit-scrollbar {

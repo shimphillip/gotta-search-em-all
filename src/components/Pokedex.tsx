@@ -37,6 +37,7 @@ const Pokedex = () => {
         styles={css`
           body {
             background-image: url(/backgrounds/${getBackground()}.png);
+            cursor: url(/pokecursors/${getBackground()}.gif), auto;
           }
         `}
       />
