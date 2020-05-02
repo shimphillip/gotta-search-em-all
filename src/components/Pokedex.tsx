@@ -14,22 +14,18 @@ const Pokedex = () => {
     return <Loading noBackground />
   }
 
-  const getBackground = (): string => {
+  const getBackground = () => {
     // pokemonIndex is guaranteed to be above 0
     if (pokemonIndex < 152 && pokemon?.pokemonData.name) {
       console.log(pokemon?.pokemonData.name)
 
-      if (pokemon?.pokemonData.name === 'nidoran-f') {
-        return 'nidoran-female'
-      }
-      if (pokemon?.pokemonData.name === 'nidoran-m') {
-        return 'nidoran-male'
-      }
-
       return pokemon?.pokemonData.name
     }
+
     return 'pikachu'
   }
+
+  // const OtherComponent = React.lazy(() => import('./OtherComponent'));
 
   return (
     <Container>
@@ -37,7 +33,6 @@ const Pokedex = () => {
         styles={css`
           body {
             background-image: url(/backgrounds/${getBackground()}.png);
-            cursor: url(/pokecursors/${getBackground()}.gif), auto;
           }
         `}
       />
