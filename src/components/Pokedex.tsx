@@ -25,8 +25,6 @@ const Pokedex = () => {
     return 'pikachu'
   }
 
-  // const OtherComponent = React.lazy(() => import('./OtherComponent'));
-
   return (
     <Container>
       <Global
