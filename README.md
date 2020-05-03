@@ -32,7 +32,7 @@ npm run start or yarn start
 
 ## Running the tests
 
-No tests 😿
+No tests yet🙊
 
 ## Deployment
 
@@ -45,7 +45,7 @@ Easy deployment with netlify :)
 
 ## Contributing
 
-Issues and PR's welcome!
+Issues/Bug Reports and PR's welcome!
 
 ## Versioning
 
@@ -53,7 +53,8 @@ Issues and PR's welcome!
 
 ## Authors
 
-- **Phillip Shim**
+- Phillip Shim
+- [ldss3sang](https://github.com/ldss3sang)
 
 ## License
 
@@ -61,24 +62,12 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-1. https://codepen.io/siliconunicorn/pen/VqoxXP - Huge inspiration from here
+1. https://codepen.io/siliconunicorn/pen/VqoxXP - Design Inspration
 
 2. https://codepen.io/animeshk874/pen/WGpAkj for the pokemon loader animation
 
 3. https://nostalgic-css.github.io/NES.css/ Pokeball sprites frm Nes.css
 
-4. https://github.com/klaussinani/hyper-pokemon Background wallpaper
+4. https://github.com/klaussinani/hyper-pokemon Background wallpapers
 
 5. https://pokeapi.co/ PokeAPI
-
-## Todos
-
-- [] Instead of getting random moves, sort the moves by levels, machine and tutor. Then create next and previous buttons to visit surrounding moves.
-- [] Give settings button/option then only allow pokemons by game generations
-- [] Write tests
-- [] Create a docker container
-- [] Add animations when switching to different pokemons, moves, etc...
-- [] Change backgrounds option (Lazyload and codesplitting)
-- [] Better contrast between some type backgrounds and texts
-- [] Maybe pikachu cursor?
-- [] Add a router to get pokemon by url
