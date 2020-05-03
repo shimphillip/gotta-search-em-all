@@ -13,6 +13,7 @@ const Container = styled.div`
     margin-bottom: 10px;
     font-family: 'Staatliches', sans-serif;
     letter-spacing: 5px;
+    background: #fdd54b;
 
     .red {
       color: #df1c18;
