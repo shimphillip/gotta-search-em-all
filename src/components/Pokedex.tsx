@@ -30,7 +30,7 @@ const Pokedex = () => {
       <Global
         styles={css`
           body {
-            background-image: url(/backgrounds/${getBackground()}.png);
+            background-image: url(/backgrounds/${getBackground()}.jpg);
           }
         `}
       />
