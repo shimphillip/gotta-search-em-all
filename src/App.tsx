@@ -34,6 +34,7 @@ const App = () => {
               background-image: url(${pikachu});
               background-position: bottom left;
               background-size: cover;
+              transition: background 1.5s ease-in;
             }
             /* width */
             ::-webkit-scrollbar {
