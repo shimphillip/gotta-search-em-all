@@ -32,8 +32,10 @@ const App = () => {
               font-family: 'VT323', monospace;
               height: 100vh;
               background-image: url(${pikachu});
-              background-position: bottom left;
+              background-position: static;
               background-size: cover;
+              background-attachment: fixed;
+              webkit-transform: translate3d(0, 0, 0);
               transition: background 1.5s ease-in;
             }
             /* width */

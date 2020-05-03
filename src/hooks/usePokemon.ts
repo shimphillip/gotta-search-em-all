@@ -80,7 +80,6 @@ const usePokemon = () => {
               return pokemon.name
             })
 
-            setLoading(false)
             setPokemon({
               ...pokemon,
               pokemonData,
@@ -89,11 +88,13 @@ const usePokemon = () => {
               evolutionSprites: sprites,
               evolutionNames: names,
             })
+            setLoading(false)
           }
         )
       })
     } catch (error) {
       console.error(error)
+      setLoading(false)
     }
   }
   const changePokemonIndex: ChangePokemonIndex = (newIndex) => {
