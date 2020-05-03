@@ -14,6 +14,7 @@ const Container = styled.div`
     font-family: 'Staatliches', sans-serif;
     letter-spacing: 5px;
     background: #fdd54b;
+    opacity: 0.8;
 
     .red {
       color: #df1c18;
