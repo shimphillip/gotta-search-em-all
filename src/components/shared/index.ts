@@ -1,4 +1,4 @@
-import TypeBadge from './TypeBadge/styles'
+import TypeBadge from './TypeItem/styles'
 import Button from './Button/styles'
 import PokeBall from './PokeBall'
 import Loading from './Loading'

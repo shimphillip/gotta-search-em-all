@@ -3,6 +3,7 @@ import { padTexts } from './padTexts'
 import { typeColors } from './typeColors'
 import { getPokemonNames } from './pokemonNames'
 import { getUniqueItems } from './getUniqueItems'
+import { typeMaps } from './typeMaps'
 
 export {
   pickRandom,
@@ -11,4 +12,5 @@ export {
   typeColors,
   getPokemonNames,
   getUniqueItems,
+  typeMaps,
 }

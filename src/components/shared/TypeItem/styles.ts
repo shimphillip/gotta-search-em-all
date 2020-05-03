@@ -3,16 +3,17 @@ import { typeColors } from '../../../helpers'
 
 interface TypeBadgeProps {
   name: string
+  size?: string
 }
 
 const TypeBadge = styled.div<TypeBadgeProps>`
   color: rgba(0, 0, 0, 0.9);
   text-transform: capitalize;
-  font-size: 1.25em;
+  font-size: ${({ size }) => (size === 'small' ? '0.75rem' : '1.25em')};
+  width: ${({ size }) => (size === 'small' ? '120px' : '150px')};
   padding: 2px;
   margin: 2px;
   border-radius: 20px;
-  width: 150px;
   font-family: 'Staatliches', cursive;
   text-align: center;
   letter-spacing: 2px;
@@ -20,6 +21,7 @@ const TypeBadge = styled.div<TypeBadgeProps>`
   align-self: center;
   background-color: ${({ name }) => typeColors[name]};
   border: groove ${({ name }) => typeColors[name]} 3px;
+  cursor: pointer;
 `
 
 export default TypeBadge

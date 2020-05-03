@@ -1,6 +1,6 @@
 import React from 'react'
 import Container from './styles'
-import TypeItem from './TypeItem'
+import TypeItem from '../../../shared/TypeItem'
 import { TypeProps } from 'components/shared/types'
 import BioStats from './BioStats'
 

@@ -17,8 +17,6 @@ const Pokedex = () => {
   const getBackground = () => {
     // pokemonIndex is guaranteed to be above 0
     if (pokemonIndex < 152 && pokemon?.pokemonData.name) {
-      console.log(pokemon?.pokemonData.name)
-
       return pokemon?.pokemonData.name
     }
 
