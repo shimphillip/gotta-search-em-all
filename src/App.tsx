@@ -35,7 +35,7 @@ const App = () => {
               background-position: static;
               background-size: cover;
               background-attachment: fixed;
-              webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
               transition: background 1.5s ease-in;
             }
             /* width */
