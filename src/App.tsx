@@ -57,6 +57,13 @@ const App = () => {
             ::-webkit-scrollbar-thumb:hover {
               background: #555;
             }
+
+            .__react_component_tooltip {
+              border-radius: 30px;
+            }
+            .__react_component_tooltip.show {
+              opacity: 0.95;
+            }
           `}
         />
         <h1>
