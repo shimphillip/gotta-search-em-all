@@ -5,11 +5,6 @@ const globalCSS = css`
   @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
   @import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
 
-  @font-face {
-    font-family: 'Pokemon Solid';
-    src: url('/Pokemon Solid.ttf') format('truetype');
-  }
-
   * {
     box-sizing: inherit;
     margin: 0;
@@ -46,6 +41,11 @@ const globalCSS = css`
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
     background: #b31818;
+  }
+
+  .__react_component_tooltip {
+    opacity: 0.95;
+    border-radius: 20px;
   }
 `
 

@@ -11,7 +11,6 @@ const Container = styled.div<ContainerProps>`
   /* Bounce twice if no sprite is avaliable */
   animation: bounce ${({ error }) => (error ? '0.3s' : '0s')} ease infinite;
   .controls {
-    font-family: 'Staatliches', cursive;
     display: flex;
     justify-content: space-around;
     margin-bottom: 10px;
@@ -50,6 +49,7 @@ interface IShinyButton {
 
 export const ShinyButton = styled.div<IShinyButton>`
   .button {
+    font-family: 'Staatliches', cursive;
     user-select: none;
     display: inline-block;
     border: 1px solid;

@@ -34,6 +34,7 @@ const Container = styled.div`
     padding: 3px 8px;
     margin-bottom: 7px;
     text-align: center;
+    text-transform: capitalize;
   }
 `
 
