@@ -59,6 +59,8 @@ export const ShinyButton = styled.div<IShinyButton>`
     overflow: hidden;
     opacity: ${({ active }) => (active ? '1' : '0.6')};
     color: ${({ active }) => (active ? 'gold' : '#FFF')};
+    transform: ${({ active }) => active && 'translateY(2px)'};
+    transition: 0.1s;
 
     &__text {
       display: block;

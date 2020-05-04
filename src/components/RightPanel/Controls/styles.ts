@@ -45,6 +45,7 @@ const Container = styled.div<ContainerProps>`
       align-self: center;
       outline: none;
       border: none;
+      cursor: pointer;
     }
   }
 `

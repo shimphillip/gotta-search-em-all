@@ -8,7 +8,7 @@ const Container = styled.div`
   margin: 10px 5px;
   padding: 5 10px;
   flex: 1;
-  height: 205px;
+  height: 215px;
 
   .loader {
     position: relative;
@@ -39,7 +39,7 @@ const Container = styled.div`
   .outer {
     overflow: hidden;
     .inner {
-      height: 40px;
+      height: 100%;
       overflow-y: scroll;
     }
   }
