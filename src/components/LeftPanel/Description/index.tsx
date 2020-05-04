@@ -27,19 +27,15 @@ const Description = ({ descriptions }: DescriptionProps) => {
   }
 
   const handleSpeech = async (description: string) => {
-    const awaitVoices = new Promise(
-      (resolve) => (window.speechSynthesis.onvoiceschanged = resolve)
-    ).then(() => {
-      const speechSynthesis = window.speechSynthesis
-      const voice = speechSynthesis.getVoices()[1]
-      let utterThis = new SpeechSynthesisUtterance(description)
-      utterThis = Object.assign(utterThis, {
-        voice,
-        pitch: 1,
-        rate: 1,
-      })
-      speechSynthesis.speak(utterThis)
+    console.log(description)
+    const speechSynthesis = window.speechSynthesis
+    let utterThis = new SpeechSynthesisUtterance(description)
+    utterThis = Object.assign(utterThis, {
+      voice: null,
+      pitch: 1,
+      rate: 1,
     })
+    speechSynthesis.speak(utterThis)
   }
 
   return (
