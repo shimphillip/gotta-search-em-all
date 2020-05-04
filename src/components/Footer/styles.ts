@@ -6,6 +6,11 @@ const Container = styled.p`
   font-size: 20px;
   margin-top: 10px;
 
+  img {
+    width: 20px;
+    height: 20px;
+  }
+
   a {
     color: #b31818;
   }
