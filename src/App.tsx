@@ -36,7 +36,7 @@ const App = () => {
               background-size: cover;
               background-attachment: fixed;
               transform: translate3d(0, 0, 0);
-              transition: background 1.5s ease-in;
+              transition: background 1s ease-in;
             }
             /* width */
             ::-webkit-scrollbar {

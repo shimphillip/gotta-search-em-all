@@ -3,18 +3,20 @@ import Container from './PokedexStyles'
 import LeftPanel from './LeftPanel'
 import Divider from './Divider'
 import RightPanel from './RightPanel'
-import { usePokemon } from '../hooks'
+import { usePokemon, useProgressiveImage } from '../hooks'
 import { Loading } from './shared'
 import { Global, css } from '@emotion/core'
+import pikachu from '../assets/pikachu.png'
 
 const Pokedex = () => {
   const { pokemon, pokemonIndex, loading, changePokemonIndex } = usePokemon()
+  const loaded = useProgressiveImage(`/backgrounds/${getBackground()}.jpg`)
 
   if (loading) {
     return <Loading noBackground />
   }
 
-  const getBackground = () => {
+  function getBackground() {
     // pokemonIndex is guaranteed to be above 0
     if (pokemonIndex < 152 && pokemon?.pokemonData.name) {
       return pokemon?.pokemonData.name
@@ -28,7 +30,7 @@ const Pokedex = () => {
       <Global
         styles={css`
           body {
-            background-image: url(/backgrounds/${getBackground()}.jpg);
+            background-image: url(${loaded || pikachu});
           }
         `}
       />
