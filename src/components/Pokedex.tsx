@@ -10,7 +10,7 @@ import pikachu from '../assets/pikachu.png'
 
 const Pokedex = () => {
   const { pokemon, pokemonIndex, loading, changePokemonIndex } = usePokemon()
-  const loaded = useProgressiveImage(`/backgrounds/${getBackground()}.jpg`)
+  const loadedImage = useProgressiveImage(`/backgrounds/${getBackground()}.jpg`)
 
   if (loading) {
     return <Loading noBackground />
@@ -30,7 +30,7 @@ const Pokedex = () => {
       <Global
         styles={css`
           body {
-            background-image: url(${loaded || pikachu});
+            background-image: url(${loadedImage || pikachu});
           }
         `}
       />
