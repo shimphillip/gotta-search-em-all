@@ -44,6 +44,7 @@ const Container = styled.div<ContainerProps>`
       text-align: right;
       align-self: center;
       outline: none;
+      border: none;
     }
   }
 `

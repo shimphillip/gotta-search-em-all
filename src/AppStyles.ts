@@ -15,6 +15,7 @@ const Container = styled.div`
     letter-spacing: 5px;
     background: #fdd54b;
     opacity: 0.8;
+    transform: skew(-5deg);
 
     .red {
       color: #df1c18;

@@ -15,10 +15,12 @@ const Button = styled.button<ButtonProps>`
   align-items: center;
   color: black;
   padding: 1px;
-  border: groove ${({ active }) => (active ? '#b8ed7c' : '#b06868')} 2px;
+  border: solid ${({ active }) => (active ? '#b8ed7c' : '#b06868')} 2px;
   font-size: 15px;
   outline: none;
   background-color: inherit;
+  transform: ${({ active }) => active && 'translateY(2px)'};
+  transition: 0.1s;
 
   &:hover {
     border-color: #b8ed7c;
@@ -28,7 +30,6 @@ const Button = styled.button<ButtonProps>`
     className === 'shiny' &&
     `
         font-family: 'Staatliches',cursive;
-        transform: rotate(0);
         background: linear-gradient(
           14deg,
           #bf8823 10%,
@@ -38,8 +39,7 @@ const Button = styled.button<ButtonProps>`
           #fff6c8 74%,
           #ffee90 80%
         );
-        background: #ffee90;
-        // border: none;
+        background: #e6a617;
         width: 90px;
         text-shadow: white -1px 1px;
   `}

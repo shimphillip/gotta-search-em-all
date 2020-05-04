@@ -18,22 +18,18 @@ const theme = {
       padding: 20px;
       border-radius: 50px;
       font-family: "VT323";
-      border: 3px solid #879a65;
     `,
   spriteScreen: `
       width: 100%;
       display: flex;
       image-rendering: pixelated;
-      border: #9aa28b 2px;
       border-radius: 50%;
       margin: 10px 0;
       background: #cad5b5;
-      border: 3px solid #acb59a;
     `,
   spriteControl: `
       height: 35px;
       width: 35px;
-      border: groove grey 3px;
       border-radius: 20px;
       cursor: pointer;
       display: flex;
