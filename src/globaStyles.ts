@@ -4,6 +4,12 @@ import pikachu from './assets/pikachu.png'
 const globalCSS = css`
   @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
   @import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+
+  @font-face {
+    font-family: 'Pokemon Solid';
+    src: url('/Pokemon Solid.ttf') format('truetype');
+  }
+
   * {
     box-sizing: inherit;
     margin: 0;
@@ -34,12 +40,12 @@ const globalCSS = css`
 
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: #888;
+    background: #c73d33;
   }
 
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background: #555;
+    background: #b31818;
   }
 `
 
