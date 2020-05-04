@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faVenus, faUndo } from '@fortawesome/free-solid-svg-icons'
-import Container from './styles'
+import Container, { ShinyButton } from './styles'
 import { Button } from '../../shared'
 import { PokeBall } from '../../shared'
 import { SpritesProps, SpriteProps } from './types'
@@ -74,14 +74,19 @@ const Sprite = ({ sprites, name }: SpriteComponentProps) => {
         >
           <FontAwesomeIcon icon={faVenus} />
         </Button>
-        <Button
+
+        <ShinyButton
           active={sprite.shiny}
-          className="shiny"
           onClick={() => handleChange('shiny')}
           aria-label="Change to Shiny"
         >
-          Shiny
-        </Button>
+          <div className="button">
+            <span className="button__mask"></span>
+            <span className="button__text">Shiny</span>
+            <span className="button__text button__text--bis">Shiny</span>
+          </div>
+        </ShinyButton>
+
         <Button
           active={!sprite.front}
           onClick={() => handleChange('front')}

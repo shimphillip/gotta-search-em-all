@@ -25,24 +25,6 @@ const Button = styled.button<ButtonProps>`
   &:hover {
     border-color: #b8ed7c;
   }
-
-  ${({ className }) =>
-    className === 'shiny' &&
-    `
-        font-family: 'Staatliches',cursive;
-        background: linear-gradient(
-          14deg,
-          #bf8823 10%,
-          #ffee90 25%,
-          #e6a617 47%,
-          #ffee90 73%,
-          #fff6c8 74%,
-          #ffee90 80%
-        );
-        background: #e6a617;
-        width: 90px;
-        text-shadow: white -1px 1px;
-  `}
 `
 
 export default Button
