@@ -9,8 +9,8 @@ interface NameProps {
 const Name = ({ name, pokemonIndex }: NameProps) => {
   return (
     <Container>
-      <p>{name}</p>
-      <p>no. {pokemonIndex}</p>
+      <p data-testid="pokemon-name">{name}</p>
+      <p data-testid="pokemon-index">no. {pokemonIndex}</p>
     </Container>
   )
 }
