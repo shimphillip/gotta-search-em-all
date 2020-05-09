@@ -13,7 +13,7 @@ const Container = styled.div`
     margin-bottom: 10px;
     font-family: 'Staatliches', sans-serif;
     letter-spacing: 5px;
-    background: #cad5b5;
+    background: #efefef;
     opacity: 0.8;
     transform: skew(-5deg);
 

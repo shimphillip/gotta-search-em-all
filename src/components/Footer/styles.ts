@@ -5,7 +5,7 @@ const Container = styled.p`
   font-family: 'Staatliches', sans-serif;
   font-size: 20px;
   margin-top: 10px;
-  background: #cad5b5;
+  background: #efefef;
   width: 200px;
   margin: 10px auto 0;
   opacity: 0.8;
