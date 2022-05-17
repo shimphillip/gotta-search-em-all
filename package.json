@@ -1,75 +1,20 @@
 {
-  "name": "pokedex",
+  "name": "gotta-search-em-all",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "@emotion/core": "10.0.28",
-    "@emotion/styled": "10.0.27",
-    "@fortawesome/fontawesome-svg-core": "1.2.28",
-    "@fortawesome/free-solid-svg-icons": "5.13.0",
-    "@fortawesome/react-fontawesome": "0.1.9",
-    "@testing-library/jest-dom": "^5.7.0",
-    "@testing-library/react": "^10.0.4",
-    "@testing-library/user-event": "7.2.1",
-    "@types/jest": "25.2.1",
-    "@types/node": "13.13.2",
-    "@types/react": "16.9.34",
-    "@types/react-dom": "16.9.6",
-    "@types/react-router-dom": "^5.1.5",
-    "@types/react-tooltip": "^4.2.4",
-    "emotion-theming": "10.0.27",
-    "react": "16.13.1",
-    "react-dom": "16.13.1",
-    "react-router-dom": "^5.1.2",
-    "react-scripts": "3.4.1",
-    "react-tooltip": "^4.2.5",
-    "typescript": "3.8.3"
-  },
   "scripts": {
-    "start": "react-scripts start",
-    "format": "prettier --write \"**/*.+(js|jsx|ts|tsx|json|css|md)\"",
-    "lint:fix": "eslint --fix .",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "test:watch": "react-scripts test --w",
-    "eject": "react-scripts eject"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "plugin:prettier/recommended"
-    ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.+(js|jsx)": [
-      "eslint --fix"
-    ],
-    "*.+(json|css|md)": [
-      "prettier --write"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "dependencies": {
+    "next": "12.1.6",
+    "react": "18.1.0",
+    "react-dom": "18.1.0"
   },
   "devDependencies": {
-    "eslint-config-prettier": "6.11.0",
-    "eslint-plugin-prettier": "3.1.3",
-    "husky": "4.2.5",
-    "lint-staged": "10.1.7",
-    "prettier": "2.0.5"
+    "eslint": "8.15.0",
+    "eslint-config-next": "12.1.6"
   }
 }

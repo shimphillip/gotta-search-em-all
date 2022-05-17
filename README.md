@@ -1,73 +1,34 @@
-# Gotta Search'EM All
-
-[![Netlify Status](https://api.netlify.com/api/v1/badges/9db2adc2-c53f-4c74-b7b6-ed358dadd1f7/deploy-status)](https://app.netlify.com/sites/gotta-search-em-all/deploys)
-
-![screenshot](./docs/screenshot.png)
-
-![screenshot](./docs/performance.png)
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
 
-Visit to see the live app https://gotta-search-em-all.netlify.app/
+First, run the development server:
 
-### Prerequisites
-
-`Git & NPM`
-
-### Installation steps
-
-```zsh
-# clone the repo
-git clone https://github.com/shimphillip/gotta-search-em-all.git
-
-# navigate to the directory
-cd gotta-search-em-all
-
-# install packages
-npm install or yarn
-
-# start the app
-npm run start or yarn start
+```bash
+npm run dev
+# or
+yarn dev
 ```
 
-## Running the tests
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-No tests yet🙊
+You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-## Deployment
+[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
 
-Easy deployment with netlify :)
+The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-## Built With
+## Learn More
 
-- React and its hooks
-- Emotion.js
+To learn more about Next.js, take a look at the following resources:
 
-## Contributing
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-Issues/Bug Reports and PR's welcome!
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Versioning
+## Deploy on Vercel
 
-1.0.0
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-## Authors
-
-- Phillip Shim
-- [ldss3sang](https://github.com/ldss3sang)
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-1. https://codepen.io/siliconunicorn/pen/VqoxXP - Design Inspration
-
-2. https://codepen.io/animeshk874/pen/WGpAkj for the pokemon loader animation
-
-3. https://nostalgic-css.github.io/NES.css/ Pokeball sprites frm Nes.css
-
-4. https://github.com/klaussinani/hyper-pokemon Background wallpapers
-
-5. https://pokeapi.co/ PokeAPI
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
